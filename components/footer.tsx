@@ -1,7 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { Twitter, Linkedin, Instagram, Mail, MapPin } from "lucide-react"
+import { Twitter, Linkedin, Instagram, Mail, MapPin, ArrowUpRight } from "lucide-react"
+import "@/components/css/footer.css"
 
 const quickLinks = [
   { href: "#home", label: "Home" },
@@ -26,98 +27,101 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-vm-black text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer */}
-        <div className="py-16 lg:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand Column */}
-          <div className="lg:col-span-1 space-y-6">
-            <Link href="/" className="flex items-center gap-1">
-              <span className="text-2xl font-bold bg-gradient-to-r from-vm-yellow to-vm-orange bg-clip-text text-transparent">
-                VM
-              </span>
-              <span className="text-2xl font-bold text-white">Agency</span>
-            </Link>
-            <p className="text-white/60 leading-relaxed">
-              Transformamos negocios con tecnología de vanguardia. IA, desarrollo web y automatización para impulsar tu crecimiento.
-            </p>
-            {/* Social Links */}
-            <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-vm-purple transition-colors duration-300"
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
+      <footer className="footer">
+        <div className="footer-glow footer-glow-purple" />
+        <div className="footer-glow footer-glow-cyan" />
+        <div className="footer-glow footer-glow-orange" />
+
+        <div className="footer-container">
+          <div className="footer-top">
+            <div className="footer-brand-card">
+              <Link href="/" className="footer-logo">
+                <span className="footer-logo-vm">VM</span>
+                <span className="footer-logo-agency">Agency</span>
+              </Link>
+
+              <p className="footer-brand-text">
+                Transformamos negocios con tecnología, diseño y automatización.
+                Creamos sistemas digitales pensados para atraer, convertir y escalar.
+              </p>
+
+              <div className="footer-socials">
+                {socialLinks.map((social, index) => (
+                    <a
+                        key={index}
+                        href={social.href}
+                        aria-label={social.label}
+                        className="footer-social-link"
+                    >
+                      <social.icon className="footer-social-icon" />
+                    </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="footer-links-area">
+              <div className="footer-column">
+                <h4 className="footer-title">Enlaces</h4>
+                <ul className="footer-list">
+                  {quickLinks.map((link, index) => (
+                      <li key={index}>
+                        <Link href={link.href} className="footer-link">
+                          {link.label}
+                        </Link>
+                      </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="footer-column">
+                <h4 className="footer-title">Legal</h4>
+                <ul className="footer-list">
+
+
+                </ul>
+              </div>
+
+              <div className="footer-column">
+                <h4 className="footer-title">Contacto</h4>
+                <ul className="footer-contact-list">
+                  <li className="footer-contact-item">
+                    <a href="mailto:hola@vmagency.com" className="footer-contact-link">
+                      <div className="footer-contact-icon-wrap">
+                        <Mail className="footer-contact-icon"/>
+                      </div>
+                      <span className="footer-contact-text">hola@vmagency.com</span>
+                    </a>
+                  </li>
+
+                  <li className="footer-contact-item">
+                    <a
+                        href="https://maps.google.com/?q=Madrid,España"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="footer-contact-link"
+                    >
+                      <div className="footer-contact-icon-wrap">
+                        <MapPin className="footer-contact-icon"/>
+                      </div>
+                      <span className="footer-contact-text">Madrid, España</span>
+                    </a>
+                  </li>
+                </ul>
+
+                <Link href="#contactar" className="footer-cta-link">
+                  Hablemos de tu proyecto
+                  <ArrowUpRight className="footer-cta-arrow"/>
+                </Link>
+              </div>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Enlaces Rápidos</h4>
-            <ul className="space-y-4">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    href={link.href}
-                    className="text-white/60 hover:text-vm-turquoise transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Servicios</h4>
-            <ul className="space-y-4">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <span className="text-white/60">{service}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Contacto</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-vm-turquoise flex-shrink-0 mt-0.5" />
-                <span className="text-white/60">hola@vmagency.com</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-vm-turquoise flex-shrink-0 mt-0.5" />
-                <span className="text-white/60">Madrid, España</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="py-6 border-t border-white/10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-white/40 text-sm">
+          <div className="footer-bottom">
+            <p className="footer-copy">
               © {new Date().getFullYear()} VM Agency. Todos los derechos reservados.
             </p>
-            <div className="flex gap-6">
-              <Link href="#" className="text-white/40 text-sm hover:text-white/60 transition-colors">
-                Política de Privacidad
-              </Link>
-              <Link href="#" className="text-white/40 text-sm hover:text-white/60 transition-colors">
-                Términos de Servicio
-              </Link>
-            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
   )
 }

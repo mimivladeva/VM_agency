@@ -68,9 +68,8 @@ export function HeroVisual() {
 
             {/* ===================== */}
             {/* 🔵 BOLA */}
-            {/* ===================== */}
-            {/* 🔵 BOLA */}
-            <motion.div
+            {/* =====================
+              <motion.div
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8 }}
@@ -83,10 +82,12 @@ export function HeroVisual() {
                 "
             >
                 <EnergyBall />
-            </motion.div>
+            </motion.div>*/}
+            {/* 🔵 BOLA */}
 
-            {/* 💥 PARTICLES BURST */}
-            <ParticlesBurst trigger={burst} />
+
+            {/* 💥 PARTICLES BURST <ParticlesBurst trigger={burst} /> */}
+
 
         </div>
     )

@@ -6,21 +6,22 @@ import { EnergyBall } from "@/components/energy-ball"
 import { HeroBackground } from "@/components/hero/HeroBackground"
 import { HeroVisual } from "@/components/hero/HeroVisual"
 import GlowButton from "@/components/hero/GlowButton";
-export function HeroSection2() {
+export function HeroSection() {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
-            {/* 🔹 GRADIENTE NAVBAR */}
-            <div className="absolute top-0 left-0 w-full h-[120px] z-40 pointer-events-none
-        bg-gradient-to-b from-[#52D3D8]/80 via-[#52D3D8]/40 to-transparent" />
+            {/* 🔹 GRADIENTE NAVBAR "absolute top-0 left-0 w-full h-[120px] z-40 pointer-events-none
+        bg-gradient-to-b from-[#52D3D8]/80 via-[#52D3D8]/40 to-transparent" */}
+
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-transparent"/>
             {/* Background */}
             <HeroBackground/>
             {/* Elementos visuales (manos + bola) */}
-            <HeroVisual />
+            <HeroVisual/>
 
             {/* 🔹 BOLA ENERGÍA (ESCALA CONTROLADA) */}
             <div className="absolute top-[48%]">
-                <EnergyBall />
+                <EnergyBall/>
             </div>
 
             {/* 🔹 OVERLAY GENERAL */}
@@ -51,7 +52,7 @@ export function HeroSection2() {
                     Creamos páginas web, apps y automatizaciones para ahorrar tiempo y aumentar ventas
                 </p>
 
-                <GlowButton />
+                <GlowButton/>
 
             </div>
 

@@ -1,6 +1,7 @@
 "use client"
 
 import "@/components/css/system.css"
+import "@/components/css/typography.css"
 import { motion } from "framer-motion"
 import { Search, Globe, Bot, Workflow, ArrowRight } from "lucide-react"
 import type { ReactNode } from "react"
@@ -8,56 +9,56 @@ import type { ReactNode } from "react"
 const steps = [
     {
         number: "1",
-        title: "Análisis del negocio",
+        title: "Entendemos dónde estás perdiendo dinero",
         description:
-            "Estudiamos el modelo de negocio, la propuesta de valor, el cliente ideal y los cuellos de botella que frenan ventas y crecimiento.",
+            "Antes de tocar diseño o tecnología, analizamos tu negocio a fondo para detectar qué está frenando tus ventas y crecimiento.",
         bullets: [
-            "Posicionamiento y oferta",
-            "Puntos flojos del negocio",
-            "Canales de captación actuales",
-            "Embudo comercial y conversión",
+            "Cómo estás captando clientes ahora",
+            "Dónde se pierden oportunidades",
+            "Qué no está funcionando",
+            "Qué sí merece escalar",
         ],
         icon: Search,
         side: "right",
     },
     {
         number: "2",
-        title: "Auditoría digital",
+        title: "Diseñamos un sistema que tenga sentido",
         description:
-            "Revisamos si la empresa tiene presencia online, qué transmite su marca y cómo está funcionando actualmente su web o ecosistema digital.",
+            "Definimos una estructura clara: embudo, automatizaciones y experiencia para que todo trabaje en conjunto, no por separado.",
         bullets: [
-            "Web actual o ausencia digital",
-            "UX, estructura y mensaje",
-            "Velocidad, SEO y confianza",
-            "Oportunidades de mejora inmediatas",
+            "Embudo de conversión",
+            "Estrategia de captación",
+            "Automatizaciones clave",
+            "Flujo completo del cliente",
         ],
         icon: Globe,
         side: "left",
     },
     {
         number: "3",
-        title: "Web nueva o rediseño",
+        title: "Construimos una web que convierte",
         description:
-            "Creamos una página web enfocada en conversión, claridad y autoridad, diseñada para vender mejor y sostener automatizaciones futuras.",
+            "Desarrollamos una web pensada para guiar, convencer y convertir, conectada desde el primer momento con todo el sistema.",
         bullets: [
-            "Arquitectura orientada a objetivos",
-            "Copy estratégico",
-            "Diseño responsive",
-            "Preparada para captación y escalado",
+            "Estructura orientada a ventas",
+            "Copy que guía decisiones",
+            "Diseño claro y responsive",
+            "Preparada para escalar",
         ],
         icon: Workflow,
         side: "right",
     },
     {
         number: "4",
-        title: "Automatización inteligente",
+        title: "Automatizamos y optimizamos",
         description:
-            "Detectamos tareas repetitivas y procesos manuales para automatizarlos con IA, integraciones y flujos que ahorran tiempo y aumentan resultados.",
+            "Integramos IA y automatizaciones para reducir trabajo manual y mejorar resultados sin depender constantemente de ti.",
         bullets: [
-            "Leads y formularios",
-            "Seguimiento comercial",
-            "Emails, CRM y agendas",
-            "Procesos internos con IA",
+            "Respuestas automáticas",
+            "Seguimiento de leads",
+            "Integración con CRM y herramientas",
+            "Optimización continua",
         ],
         icon: Bot,
         side: "left",
@@ -97,18 +98,14 @@ export default function RoadmapSection() {
                 <FadeInSection>
                     <div className="roadmap-heading">
 
-
-                        <h2 className="roadmap-title">
-                            Cómo transformamos un negocio con{" "}
-                            <span className="text-cyan">web</span>,{" "}
-                            <span className="text-teal">IA</span> y{" "}
-                            <span className="text-orange">automatización</span>
+                        <h2 className="roadmap-title heading-h2">
+                            Así construimos tu sistema{" "}
+                            <span className="text-cyan">paso a paso</span>
                         </h2>
 
                         <p className="roadmap-subtitle">
-                            No empezamos diseñando por diseñar. Primero entendemos el negocio,
-                            detectamos lo que está frenando resultados y luego construimos una
-                            solución digital que tenga sentido.
+                            No es una web suelta ni automatizaciones sin sentido.
+                            Construimos un sistema completo donde cada parte trabaja para generar clientes y hacer crecer tu negocio.
                         </p>
                     </div>
                 </FadeInSection>
@@ -131,15 +128,15 @@ export default function RoadmapSection() {
                                         >
                                             <div className="roadmap-card">
 
-
                                                 <div className="roadmap-card-header">
                                                     <div className="roadmap-icon">
                                                         <Icon size={28} strokeWidth={2.1}/>
                                                     </div>
 
-                                                    <h3 className="roadmap-card-title">{step.title}</h3>
+                                                    <h3 className="roadmap-card-title heading-h3">{step.title}</h3>
                                                 </div>
-                                                <p className="roadmap-card-description">
+
+                                                <p className="roadmap-card-description text-md">
                                                     {step.description}
                                                 </p>
 
@@ -170,9 +167,8 @@ export default function RoadmapSection() {
                             <span className="roadmap-result-badge">Resultado</span>
 
                             <p className="roadmap-result-text">
-                                Una presencia digital sólida, una web pensada para convertir y
-                                un sistema de automatización que reduce tareas manuales y
-                                acelera el crecimiento.
+                                Un sistema que atrae clientes, los convierte y organiza tu negocio
+                                para que puedas crecer sin depender de apagar fuegos constantemente.
                             </p>
 
                             <button className="roadmap-result-button">

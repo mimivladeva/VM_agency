@@ -2,56 +2,59 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles } from "lucide-react"
+import "@/components/css/CTASection.css"
+import "@/components/css/typography.css"
+import { HeroBackground } from "@/components/hero/HeroBackground"
+import NeuralStatic from "@/components/hero/NeuralStatic"
+import GlowButton from "@/components/hero/GlowButton";
 
 export function CTASection() {
   return (
-    <section id="contactar" className="py-24 lg:py-32 bg-background relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-vm-purple/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-vm-turquoise/10 rounded-full blur-[120px]" />
-      </div>
+      <section id="contactar" className="cta-section">
+        <div className="cta-section-bg">
+          <div className="cta-section-glow cta-section-glow-top" />
+          <div className="cta-section-glow cta-section-glow-bottom" />
+        </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-gradient-to-br from-vm-black via-vm-black to-vm-purple/40 rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden">
-          {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-vm-turquoise/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-vm-purple/30 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
-
-          {/* Content */}
-          <div className="relative z-10 space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20">
-              <Sparkles className="w-4 h-4 text-vm-yellow" />
-              <span className="text-sm font-medium text-white/90">¿Listo para empezar?</span>
+        <div className="cta-section-container">
+          <div className="cta-card">
+            {/* CAPAS DE FONDO */}
+            <div className="cta-card-bg">
+              <HeroBackground/>
+              <NeuralStatic/>
+              <div className="cta-card-overlay"/>
+            </div>
+            {/* CAPAS DE logo */}
+            <div className="cta-logo">
+              <img src="/images/VMlogo.png" alt="VM Agency" className="cta-logo-image"/>
             </div>
 
-            {/* Title */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight text-balance">
-              Convierte tus ideas en sistemas que{" "}
-              <span className="bg-gradient-to-r from-vm-yellow to-vm-orange bg-clip-text text-transparent">
-                generen resultados
-              </span>
-            </h2>
+            {/* DECORACIONES EXTRA */}
+            <div className="cta-card-deco cta-card-deco-right"/>
+            <div className="cta-card-deco cta-card-deco-left"/>
 
-            {/* Description */}
-            <p className="text-lg text-white/70 max-w-2xl mx-auto text-pretty">
-              Agenda una llamada gratuita y descubre cómo podemos ayudarte a optimizar tu negocio con tecnología de vanguardia.
-            </p>
+            {/* CONTENIDO */}
+            <div className="cta-content">
+              {/*  <div className="cta-badge">
+                <Sparkles className="cta-badge-icon"/>
+                <span>¿Listo para empezar?</span>
+              </div> */}
 
-            {/* CTA Button */}
-            <div className="pt-4">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-vm-yellow to-vm-orange text-vm-black font-semibold px-10 py-7 text-lg rounded-full shadow-lg hover:shadow-2xl hover:shadow-vm-orange/30 hover:scale-105 transition-all duration-300"
-              >
-                Agenda tu llamada
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <h2 className="cta-title heading-h2">
+                Convierte tus ideas en sistemas que <span>generen resultados</span>
+              </h2>
+
+              <p className="cta-description">
+                Agenda una llamada gratuita y descubre cómo podemos ayudarte a
+                optimizar tu negocio con tecnología de vanguardia.
+              </p>
+
+              <div className="hero-button-wrapper">
+                <GlowButton/>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   )
 }

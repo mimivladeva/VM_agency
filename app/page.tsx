@@ -1,12 +1,11 @@
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
-import { ServicesSection } from "@/components/services-section"
 import { ProjectsSection } from "@/components/projects-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 import ParticlesBackground from "@/components/ParticlesBackground"
 import AutomationProgramSection from "@/components/system";
-import BusinessAnalysisSection from "@/components/BusinessAnalysisSection"
+import BusinessConversionSection from "@/components/BusinessConversionSection";
 import BackgroundImage from "@/components/BackgroundImage"
 
 
@@ -27,7 +26,7 @@ export default function Home() {
                 <Navbar/>
                 <HeroSection/>
                 <BackgroundImage />
-                <BusinessAnalysisSection/>
+                <BusinessConversionSection/>
                 <AutomationProgramSection/>
                 <ProjectsSection/>
                 <CTASection/>

@@ -1,4 +1,4 @@
-# 2. Mantener tu rama actualizada con main !!!!! Antes de empezar a trabajar cada día !!!! :
+# 2. Mantener tu rama actualizada con main !!!!!! Antes de empezar a trabajar cada día !!!! :
 
 git checkout viktor   # o  git checkout mimi
 git fetch origin

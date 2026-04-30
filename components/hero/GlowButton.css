@@ -95,4 +95,31 @@
     to {
         transform: rotate(360deg);
     }
+
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+    .glow-button {
+        padding: 0.8rem 1.5rem;   /* antes 1.5rem 2.5rem */
+        font-size: 0.9rem;        /* antes 1.125rem */
+    }
+
+    .glow-wrapper:hover .glow-button {
+        transform: scale(1.05);   /* menos exagerado en móvil */
+    }
+
+    .glow-button:active {
+        transform: scale(0.92);
+    }
+
+    .glow-aura {
+        inset: -4px;              /* reduce aura */
+        filter: blur(12px);
+    }
+
+    .glow-border {
+        padding: 1px;             /* borde más fino */
+    }
 }

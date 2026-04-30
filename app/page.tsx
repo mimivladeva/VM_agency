@@ -5,6 +5,7 @@ import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 import ParticlesBackground from "@/components/ParticlesBackground"
 import AutomationProgramSection from "@/components/system";
+import  ServicesLadder from "@/components/services";
 import BusinessConversionSection from "@/components/BusinessConversionSection";
 import BackgroundImage from "@/components/BackgroundImage"
 
@@ -25,6 +26,7 @@ export default function Home() {
             <div className="relative z-10">
                 <Navbar/>
                 <HeroSection/>
+                <ServicesLadder/>
                 <BackgroundImage />
                 <BusinessConversionSection/>
                 <AutomationProgramSection/>

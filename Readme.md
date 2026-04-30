@@ -1,10 +1,3 @@
-#1.  Crear una rama SOLO LA PRIMERA VEZ
-
-git checkout main
-git pull origin main
-git checkout -b viktor # o mimi
-git push -u origin viktor # o mimi
-
 # 2. Mantener tu rama actualizada con main !!!!! Antes de empezar a trabajar cada día !!!! :
 
 git checkout viktor   # o  git checkout mimi

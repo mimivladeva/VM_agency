@@ -3,13 +3,11 @@ import { HeroSection } from "@/components/hero-section"
 import { ProjectsSection } from "@/components/projects-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
-import ParticlesBackground from "@/components/ParticlesBackground"
 import AutomationProgramSection from "@/components/system";
 import  ServicesLadder from "@/components/services";
 import BusinessConversionSection from "@/components/BusinessConversionSection";
 import BackgroundImage from "@/components/BackgroundImage"
 import { LanguageProvider } from "@/lib/LanguageContext"
-import { FAQSection } from "@/components/FAQSection";
 
 
 
@@ -24,7 +22,6 @@ export default function Home() {
                     <Navbar/>
                     <HeroSection/>
                     <ServicesLadder/>
-                    <FAQSection />
                     <BackgroundImage />
                     <BusinessConversionSection/>
                     <AutomationProgramSection/>

@@ -31,7 +31,7 @@
 
 .projects-title {
     margin: 0 0 1rem;
-    font-size: clamp(2.25rem, 4vw, 3.4rem);
+
     line-height: 1.05;
     font-weight: 800;
     color: var(--projects-text);
@@ -52,7 +52,6 @@
 
 .projects-subtitle {
     margin: 0;
-    font-size: 1rem;
     line-height: 1.7;
     color: var(--projects-text-soft);
 }
@@ -175,7 +174,6 @@
 
 .projects-card-title {
     margin: 0.55rem 0 0;
-    font-size: 1.6rem;
     line-height: 1.15;
     font-weight: 800;
     letter-spacing: -0.03em;

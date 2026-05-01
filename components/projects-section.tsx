@@ -5,8 +5,9 @@ import Image from "next/image"
 import { ArrowUpRight, Globe, Zap, BarChart3 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion, AnimatePresence } from "framer-motion"
-import "@/components/css/ProjectsSection.css"
 import { useEffect, useRef } from "react";
+import "@/components/css/ProjectsSection.css"
+import "@/components/css/typography.css"
 
 const projects = [
   {
@@ -129,7 +130,7 @@ export function ProjectsSection() {
       <section className="projects-section">
         <div className="projects-container">
           <div className="projects-header">
-            <h2 className="projects-title">
+            <h2 className="projects-title heading-h2">
               Proyectos que{" "}
               <span className="projects-title-gradient">convierten</span>
             </h2>
@@ -181,7 +182,8 @@ export function ProjectsSection() {
 
                         <span className="projects-category">{project.category}</span>
 
-                        <h3 className="projects-card-title">
+
+                        <h3 className="projects-card-title card-title">
                       <span className="projects-card-title-gradient">
                         {project.title}
                       </span>

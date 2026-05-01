@@ -2,7 +2,10 @@
 
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import { HeroBackground } from "@/components/hero/HeroBackground";
+import NeuralStatic from "@/components/hero/NeuralStatic";
 import "./css/FAQSection.css";
+import "./css/typography.css";
 
 const faqs = [
     {
@@ -22,12 +25,14 @@ const faqs = [
             "Al contrario. Los negocios pequeños son los que más se benefician de automatizar. Cada hora que ahorras en respuestas, seguimiento o tareas repetitivas es una hora que puedes dedicar a gestionar mejor tu negocio o recuperar tiempo libre.",
     },
     {
-        question: "Ya tengo una página web o redes sociales y no me traen clientes.",
+        question:
+            "Ya tengo una página web o redes sociales y no me traen clientes.",
         answer:
             "Tener presencia online no significa tener un sistema que convierte. Nosotros no solo diseñamos una web bonita: creamos una estrategia básica de captación para que el cliente pase de verte online a confiar en ti y contratar tu servicio.",
     },
     {
-        question: "He tenido malas experiencias con agencias de marketing antes.",
+        question:
+            "He tenido malas experiencias con agencias de marketing antes.",
         answer:
             "Lo entendemos. Muchas agencias venden humo, tecnicismos o métricas que no se traducen en resultados reales. En VM Agencia nos enfocamos en una transformación clara: más profesionalidad, más confianza y más oportunidades reales para tu negocio.",
     },
@@ -47,50 +52,61 @@ export function FAQSection() {
 
     return (
         <section className="faq-section" id="faq">
-            <div className="faq-bg faq-bg-left" />
-            <div className="faq-bg faq-bg-right" />
+            {/* HERO */}
+            <div className="faq-hero">
+                <HeroBackground />
+                <NeuralStatic />
+                <div className="faq-hero-overlay" />
 
-            <div className="faq-container">
-                <div className="faq-header">
-                    <h2>
-                        Preguntas <span>Frecuentes</span>
+                <div className="faq-hero-content">
+                    <h2 className="heading-h2">
+                        <span>Preguntas</span>
+                        <span className="hero-title-impulsa"> Frecuentes</span>
                     </h2>
-                    <p>
+
+                    <p className="text-body">
                         Resolvemos tus dudas para que tomes decisiones con confianza.
                     </p>
                 </div>
+            </div>
 
-                <div className="faq-list">
-                    {faqs.map((faq, index) => {
-                        const isOpen = openIndex === index;
+            {/* CONTENIDO BLANCO */}
+            <div className="faq-content-wrapper">
+            <div className="faq-container">
+                    <div className="faq-list">
+                        {faqs.map((faq, index) => {
+                            const isOpen = openIndex === index;
 
-                        return (
-                            <div
-                                key={index}
-                                className={`faq-item ${isOpen ? "active" : ""}`}
-                            >
-                                <button
-                                    className="faq-question"
-                                    onClick={() => toggleFAQ(index)}
-                                    aria-expanded={isOpen}
+                            return (
+                                <div
+                                    key={index}
+                                    className={`faq-item ${isOpen ? "active" : ""}`}
                                 >
-                  <span className="faq-icon">
-                    {isOpen ? <Minus size={20} /> : <Plus size={20} />}
-                  </span>
+                                    <button
+                                        className="faq-question"
+                                        onClick={() => toggleFAQ(index)}
+                                        aria-expanded={isOpen}
+                                    >
+                    <span className="faq-icon">
+                      {isOpen ? <Minus size={20} /> : <Plus size={20} />}
+                    </span>
 
-                                    <span className="faq-question-text">{faq.question}</span>
+                                        <span className="faq-question-text card-title">
+                      {faq.question}
+                    </span>
 
-                                    <span className="faq-arrow">
-                    {isOpen ? "⌃" : "⌄"}
-                  </span>
-                                </button>
+                                        <span className="faq-arrow">
+                      {isOpen ? "⌃" : "⌄"}
+                    </span>
+                                    </button>
 
-                                <div className="faq-answer">
-                                    <p>{faq.answer}</p>
+                                    <div className="faq-answer">
+                                        <p className="text-body">{faq.answer}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
         </section>

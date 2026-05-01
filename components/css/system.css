@@ -127,7 +127,6 @@
 .roadmap-subtitle {
     max-width: 760px;
     margin: 1.5rem auto 0;
-    font-size: 1rem; /* 16px mobile */
     line-height: 1.9;
     color: var(--roadmap-text-soft);
 }
@@ -241,14 +240,14 @@
 
 .roadmap-card-title {
     margin-top: 1.25rem;
-    font-size: 1.2rem;
+
     line-height: 1.2;
     font-weight: 600;
     color: var(--roadmap-text);
 }
 
 .roadmap-card-description {
-    font-size: 0.95rem;
+
     line-height: 1.6;
     opacity: 0.75;
     color: var(--roadmap-text-soft);
@@ -385,7 +384,6 @@
 /* texto más protagonista */
 .roadmap-result-text {
     margin-top: 1.5rem;
-    font-size: 1.15rem;
     line-height: 1.7;
     color: var(--roadmap-text);
 

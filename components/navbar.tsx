@@ -31,7 +31,7 @@ export function Navbar() {
     { href: "#proyectos", label: translations[lang].proyectos },
     { href: "#servicios", label: translations[lang].servicios },
     { href: "#contactar", label: translations[lang].contactar },
-    { href: "#faq", label: translations[lang].faq },
+    { href: "/faq", label: translations[lang].faq }
   ]
 
   return (

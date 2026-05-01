@@ -1,5 +1,6 @@
 "use client";
 import "./css/ServicesLadder.css";
+import "./css/typography.css";
 import { useEffect, useState, useRef } from "react";
 
 const services = [
@@ -119,7 +120,8 @@ export default function ServicesLadder() {
   return (
       <section className="services-ladder">
         <div className="services-container">
-          <h2 className="services-title">
+
+          <h2 className="services-title heading-h2">
             Escala tu negocio <span>paso a paso</span>
           </h2>
 
@@ -152,8 +154,8 @@ export default function ServicesLadder() {
                   >
                     <div className="card-badge">Pack {service.id}</div>
 
-                    <h3>{service.title}</h3>
-                    <p>{service.desc}</p>
+                    <h3 className="card-title">{service.title}</h3>
+                    <p className="card-desc">{service.desc}</p>
 
                     <ul>
                       {service.items.map((item, i) => (

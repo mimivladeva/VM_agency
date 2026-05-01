@@ -22,6 +22,10 @@ h1, h2, h3, h4 {
     font-weight: 700;
     letter-spacing: -0.01em;
 }
+.text-body {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
 
 @media (min-width: 640px) {
     .heading-h2 {

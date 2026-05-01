@@ -9,6 +9,7 @@ import  ServicesLadder from "@/components/services";
 import BusinessConversionSection from "@/components/BusinessConversionSection";
 import BackgroundImage from "@/components/BackgroundImage"
 import { LanguageProvider } from "@/lib/LanguageContext"
+import { FAQSection } from "@/components/FAQSection";
 
 
 
@@ -23,6 +24,7 @@ export default function Home() {
                     <Navbar/>
                     <HeroSection/>
                     <ServicesLadder/>
+                    <FAQSection />
                     <BackgroundImage />
                     <BusinessConversionSection/>
                     <AutomationProgramSection/>

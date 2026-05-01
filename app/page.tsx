@@ -8,33 +8,30 @@ import AutomationProgramSection from "@/components/system";
 import  ServicesLadder from "@/components/services";
 import BusinessConversionSection from "@/components/BusinessConversionSection";
 import BackgroundImage from "@/components/BackgroundImage"
+import { LanguageProvider } from "@/lib/LanguageContext"
 
 
 
 export default function Home() {
     return (
-        <main className="relative min-h-screen">
+        <LanguageProvider>
+            <main className="relative min-h-screen">
 
+                <div className="fixed inset-0 bg-background/60 -z-10"/>
 
-            {/* FONDO DE PARTÍCULAS  <ParticlesBackground/>*/}
+                <div className="relative z-10">
+                    <Navbar/>
+                    <HeroSection/>
+                    <ServicesLadder/>
+                    <BackgroundImage />
+                    <BusinessConversionSection/>
+                    <AutomationProgramSection/>
+                    <ProjectsSection/>
+                    <CTASection/>
+                    <Footer/>
+                </div>
 
-
-            {/* OVERLAY PARA QUE SE VEA BIEN */}
-            <div className="fixed inset-0 bg-background/60 -z-10"/>
-
-            {/* CONTENIDO */}
-            <div className="relative z-10">
-                <Navbar/>
-                <HeroSection/>
-                <ServicesLadder/>
-                <BackgroundImage />
-                <BusinessConversionSection/>
-                <AutomationProgramSection/>
-                <ProjectsSection/>
-                <CTASection/>
-                <Footer/>
-            </div>
-
-        </main>
+            </main>
+        </LanguageProvider>
     )
 }

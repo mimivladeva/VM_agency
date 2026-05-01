@@ -5,8 +5,10 @@ import { HeroBackground } from "@/components/hero/HeroBackground"
 import GlowButton from "@/components/hero/GlowButton"
 import {HeroVisual} from "@/components/hero/HeroVisual";
 import NeuralStatic from "@/components/hero/NeuralStatic"
+import { useLanguage } from "@/lib/LanguageContext"
 
 export function HeroSection() {
+
     return (
         <section className="hero-section">
             {/* Capa degradado superior */}

@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { EnergyBall } from "@/components/energy-ball"
 import ParticlesBurst from "@/components/hero/particlesHero"
 import {useState} from "react";
 

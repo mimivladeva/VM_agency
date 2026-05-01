@@ -6,6 +6,7 @@ import { ArrowUpRight, Globe, Zap, BarChart3 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion, AnimatePresence } from "framer-motion"
 import "@/components/css/ProjectsSection.css"
+import { useEffect, useRef } from "react";
 
 const projects = [
   {
@@ -44,6 +45,7 @@ const projects = [
 ]
 
 function DeviceMockup({ project }: { project: (typeof projects)[0] }) {
+
   return (
       <AnimatePresence mode="wait">
         <motion.div
@@ -112,6 +114,17 @@ function DeviceMockup({ project }: { project: (typeof projects)[0] }) {
 export function ProjectsSection() {
   const [activeProject, setActiveProject] = useState<(typeof projects)[0] | null>(null)
 
+
+  const previewRef = useRef<HTMLDivElement | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
       <section className="projects-section">
         <div className="projects-container">
@@ -143,7 +156,18 @@ export function ProjectsSection() {
                     <Card
                         key={project.id}
                         onMouseEnter={() => setActiveProject(project)}
-                        onClick={() => setActiveProject(project)}
+                        onClick={() => {
+                          setActiveProject(project);
+
+                          if (isMobile) {
+                            setTimeout(() => {
+                              previewRef.current?.scrollIntoView({
+                                behavior: "smooth",
+                                block: "center",
+                              });
+                            }, 100);
+                          }
+                        }}
                         className={`projects-card group ${
                             activeProject ? "projects-card-full" : "projects-card-fixed"
                         } ${isActive ? "projects-card-active" : "projects-card-idle"}`}
@@ -180,6 +204,7 @@ export function ProjectsSection() {
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     className="projects-preview"
+                    ref={previewRef}
                 >
                   <DeviceMockup project={activeProject} />
                 </motion.div>

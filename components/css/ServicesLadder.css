@@ -59,11 +59,7 @@
 }
 
 /* HOVER */
-.ladder-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: rgba(108, 44, 255, 0.6);
-    box-shadow: 0 0 30px rgba(108, 44, 255, 0.3);
-}
+
 
 /* ACTIVA */
 .ladder-card.active {
@@ -164,7 +160,25 @@
     from { transform: translateY(0); }
     to { transform: translateY(-5px); }
 }
+/* 📱 MOBILE FIX (NO rompe diseño desktop) */
+@media (max-width: 768px) {
 
+    /* ❌ quitar cursor */
+    .cursor {
+        display: none;
+    }
+
+    /* stack vertical limpio */
+    .ladder {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* quitar escalera visual SOLO en mobile */
+    .ladder-card {
+        margin-top: 0 !important;
+    }
+}
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .ladder {

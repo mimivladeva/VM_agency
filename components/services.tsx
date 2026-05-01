@@ -55,18 +55,50 @@ const services = [
 export default function ServicesLadder() {
   const [active, setActive] = useState(0);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
 
-  const cardRefs = useRef([]);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // 🔁 ciclo automático
+
+
   useEffect(() => {
+    if (isMobile) return;
+
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % services.length);
     }, 2000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isMobile]);
+
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const handleScroll = () => {
+      cardRefs.current.forEach((el, index) => {
+        if (!el) return;
+        const rect = el.getBoundingClientRect();
+
+        if (rect.top < window.innerHeight * 0.65) {
+          setActive(index);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMobile]);
 
   // 📍 calcular posición REAL
   useEffect(() => {
@@ -110,7 +142,9 @@ export default function ServicesLadder() {
               {services.map((service, index) => (
                   <div
                       key={service.id}
-                      ref={(el) => (cardRefs.current[index] = el)}
+                      ref={(el) => {
+                        cardRefs.current[index] = el;
+                      }}
                       className={`ladder-card ${active === index ? "active" : ""}`}
                       style={{
                         marginTop: `${(services.length - index - 1) * 60}px`

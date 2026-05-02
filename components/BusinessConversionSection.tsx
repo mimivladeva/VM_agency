@@ -82,22 +82,22 @@ const chaosItems = [
     {
         icon: MessageCircleMore,
         title: "Los mensajes se acumulan",
-        text: "WhatsApp, Instagram y email por todas partes. Respondes tarde y cada minuto enfría una venta.",
+        text: "Respondes tarde y cada minuto enfría una venta. WhatsApp, Instagram y email por todas partes.",
     },
     {
         icon: Clock3,
-        title: "Tu negocio depende de apagar fuegos",
-        text: "Todo pasa por ti. Si no estás encima, nada avanza como debería.",
+        title: "El desorden te está costando dinero",
+        text: "Nada avanza si tú no lo validas cada pequeño paso y eso genera retrasos no puedes hacer todo.",
     },
     {
         icon: SearchX,
-        title: "No sabes qué lead vale la pena",
-        text: "Entran contactos, pero no hay filtro, seguimiento ni control real de oportunidades.",
+        title: "Pérdida de Oportunidades",
+        text: "Entran contactos, pero no hay filtro, seguimiento ni control real de las oportunidades.",
     },
     {
         icon: Globe2,
-        title: "Tu web está, pero no trabaja",
-        text: "No genera confianza, no guía al cliente y no convierte como debería.",
+        title: "Negocio Sin WEB",
+        text: "Si no estas en internet no existes para el cliente, dependes solo del boca a boca",
     },
 ]
 
@@ -114,13 +114,13 @@ const solutionItems = [
     },
     {
         icon: ChartNoAxesCombined,
-        title: "Cada lead entra en un sistema",
+        title: "Cada cliente entra en un sistema",
         text: "Captación, seguimiento y control en un flujo claro y medible.",
     },
     {
         icon: Sparkles,
-        title: "Tu web empieza a convertir",
-        text: "Una presencia digital moderna, estratégica y enfocada en generar resultados.",
+        title: "Tu WEB empieza a convertir",
+        text: "Una presencia digital genera confianza, estratégica y enfocada en generar resultados.",
     },
 ]
 
@@ -143,21 +143,20 @@ export default function BusinessConversionSection() {
                 >
                     <motion.div className="business-conversion-eyebrow" variants={fadeUp}>
                         <AlertTriangle size={16} />
-                        <span>El problema no es la demanda. Es el desorden.</span>
+                        <span>Sin presencia digital no existes</span>
                     </motion.div>
 
                     <motion.h2
                         className="business-conversion-title heading-h2"
                         variants={fadeUp}
                     >
-                        Tu negocio no está creciendo lento.
+                        
                         <br />
-                        <span>Está perdiendo dinero cada día que sigue funcionando en caos.</span>
+                        <span>¿Tu negocio es una carga o un sistema?</span>
                     </motion.h2>
 
                     <motion.p className="business-conversion-subtitle" variants={fadeUp}>
-                        Si los mensajes se te escapan, tu web no convierte y todo depende de ti,
-                        no necesitas trabajar más: necesitas un sistema que venda, responda y organice por ti.
+                        Ayudamos a negocios locales sin presencia digital al la transformacion digital. Escalamos tu negocio, damos visibilidad, aumentamos clientes y ahorramos tiempo
                     </motion.p>
                 </motion.div>
 
@@ -172,17 +171,17 @@ export default function BusinessConversionSection() {
                         <div className="business-panel-top">
                             <div className="business-panel-badge business-panel-badge-chaos">
                                 <Frown size={16} />
-                                <span>Antes: caos, saturación y fuga de clientes</span>
+                                <span>Negocio Tradicional: caos, saturación y fuga de clientes</span>
                             </div>
 
                             <h3 className="business-panel-title heading-h3">
                                 Vas ocupado todo el día,
                                 <br />
-                                <span>pero el negocio sigue sintiéndose fuera de control.</span>
+                                <span>pero tu negocio sigue sintiéndose fuera de control.</span>
                             </h3>
 
                             <p className="business-panel-description">
-                                Hay movimiento, hay mensajes, hay trabajo... pero también retrasos,
+                                Tienes movimiento, mensajes, trabajo... pero también retrasos,
                                 desorden y oportunidades que desaparecen sin que te des cuenta.
                             </p>
                         </div>
@@ -235,18 +234,18 @@ export default function BusinessConversionSection() {
                         <div className="business-panel-top">
                             <div className="business-panel-badge business-panel-badge-solution">
                                 <Sparkles size={16} />
-                                <span>Después: orden, control y crecimiento real</span>
+                                <span>Negocio VM Sistema: orden, control y crecimiento real</span>
                             </div>
 
                             <h3 className="business-panel-title heading-h3">
-                                Tu negocio sigue recibiendo clientes,
+                                Tu negocio ahora tiene un sistema,
                                 <br />
-                                <span>pero ahora todo está conectado para convertir mejor.</span>
+                                <span>Consigues mas clientes, orden, confianza y tareas automatizadas</span>
                             </h3>
 
                             <p className="business-panel-description">
                                 Menos improvisación, menos tareas repetitivas y más control sobre cada
-                                lead, cada proceso y cada oportunidad de venta.
+                                cliente, cada proceso y cada oportunidad de venta.
                             </p>
                         </div>
 

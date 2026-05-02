@@ -41,12 +41,11 @@ export function CTASection() {
               </div> */}
 
               <h2 className="cta-title heading-h2">
-                Convierte tus ideas en sistemas que <span>generen resultados</span>
+               Si quieres hacer crecer tu negocio local <span>necesitas VM Agencia</span>
               </h2>
 
               <p className="cta-description">
-                Agenda una llamada gratuita y descubre cómo podemos ayudarte a
-                optimizar tu negocio con tecnología de vanguardia.
+                Te enseñamos que esta fallando en tu negocio y como solucionarlo. 
               </p>
 
               <div className="hero-button-wrapper">

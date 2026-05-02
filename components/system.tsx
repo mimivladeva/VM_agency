@@ -9,21 +9,21 @@ import type { ReactNode } from "react"
 const steps = [
     {
         number: "1",
-        title: "Entendemos dónde estás perdiendo dinero",
+        title: "Diagnósticamos y analizamos tu Negocio",
         description:
-            "Antes de tocar diseño o tecnología, analizamos tu negocio a fondo para detectar qué está frenando tus ventas y crecimiento.",
+            "Antes de tocar diseño o tecnología, analizamos tu negocio y detectamos si podemos trabajar juntos",
         bullets: [
-            "Cómo estás captando clientes ahora",
-            "Dónde se pierden oportunidades",
-            "Qué no está funcionando",
-            "Qué sí merece escalar",
+            "¿Cómo estás captando clientes ahora?",
+            "¿Cuánto dinero estas perdiendo por no tener presencia digital?",
+            "¿Dónde abandona tu cliente?",
+            "¿Podemos trabajar contigo?",
         ],
         icon: Search,
         side: "right",
     },
     {
         number: "2",
-        title: "Diseñamos un sistema que tenga sentido",
+        title: "Diseñamos el VM Sistema",
         description:
             "Definimos una estructura clara: embudo, automatizaciones y experiencia para que todo trabaje en conjunto, no por separado.",
         bullets: [

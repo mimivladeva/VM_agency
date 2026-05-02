@@ -27,19 +27,19 @@ export function HeroSection() {
             {/* Contenido */}
             <div className="hero-content">
                 <h1 className="hero-title">
-                    Diseñamos un{" "}
+                    Transformamos tu negocio{" "}
                     <span className="hero-title-system">
-                        sistema
+                        invisible
                     </span>{" "}
-                    que{" "}
+                    en{" "}
                     <span className="hero-title-impulsa">
-                        impulsa
+                     digital
                     </span>{" "}
-                    tu negocio
+                    que genera clientes
                 </h1>
 
                 <p className="hero-subtitle">
-                    Creamos páginas web, apps y automatizaciones para ahorrar tiempo y aumentar ventas
+                    Diseñamos Páginas Web |  Apps |  IA y Automatizaciones | para ahorrar tiempo y generar ventas
                 </p>
 
                 <div className="hero-button-wrapper">

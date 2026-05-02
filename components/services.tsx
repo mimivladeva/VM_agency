@@ -122,7 +122,7 @@ export default function ServicesLadder() {
         <div className="services-container">
 
           <h2 className="services-title heading-h2">
-            Escala tu negocio <span>paso a paso</span>
+            Transformamos tu negocio invisible a digital <span>paso a paso</span>
           </h2>
 
           <div className="ladder-wrapper">

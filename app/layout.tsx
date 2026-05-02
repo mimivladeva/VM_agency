@@ -1,6 +1,6 @@
-import type { Metadata, Viewport } from 'next'
 import { Inter, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import type  {Metadata ,Viewport }  from "next"
 import './globals.css'
 
 const inter = Inter({ 
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
 }
 
-export const viewport: Viewport = {
+export const viewport:  Viewport= {
   themeColor: '#682cdf',
   width: 'device-width',
   initialScale: 1,

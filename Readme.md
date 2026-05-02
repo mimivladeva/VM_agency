@@ -6,7 +6,7 @@ git merge origin/main
 
 # 3. Hacer cambios y subirlos a tu rama Mimi
 
-git add .
+
 git commit -m "sección X tocada"
 git push
 

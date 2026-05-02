@@ -1,22 +1,22 @@
 "use client";
+
 import "./css/ServicesLadder.css";
 import "./css/typography.css";
 import { useEffect, useState, useRef } from "react";
+import Link from "next/link";
 
 const services = [
   {
     id: 1,
     title: "Presencia digital",
     desc: "Entrada básica para que tu negocio exista y se entienda online.",
-    items: [
-      "Página web",
-      "Copywriting con sentido",
-      "SEO básico",
-    ],
+    link: "/services/pack1",
+    items: ["Página web", "Copywriting con sentido", "SEO básico"],
   },
   {
     id: 2,
     title: "Captación de clientes",
+    link: "/services/pack2",
     desc: "Empiezas a convertir visitas en oportunidades reales.",
     items: [
       "Estrategia de marketing",
@@ -28,6 +28,7 @@ const services = [
   {
     id: 3,
     title: "Automatización e IA",
+    link: "/services/pack3",
     desc: "El sistema trabaja por ti mientras tú escalas.",
     items: [
       "Automatización de procesos repetitivos",
@@ -40,6 +41,7 @@ const services = [
   {
     id: 4,
     title: "Análisis y optimización",
+    link: "/services/pack4",
     desc: "Decisiones basadas en datos para crecer sin fricción.",
     items: [
       "Análisis de datos",
@@ -50,9 +52,6 @@ const services = [
   },
 ];
 
-
-
-
 export default function ServicesLadder() {
   const [active, setActive] = useState(0);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
@@ -60,16 +59,14 @@ export default function ServicesLadder() {
 
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
+
     checkMobile();
     window.addEventListener("resize", checkMobile);
+
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
-
-  // 🔁 ciclo automático
-
 
   useEffect(() => {
     if (isMobile) return;
@@ -87,6 +84,7 @@ export default function ServicesLadder() {
     const handleScroll = () => {
       cardRefs.current.forEach((el, index) => {
         if (!el) return;
+
         const rect = el.getBoundingClientRect();
 
         if (rect.top < window.innerHeight * 0.65) {
@@ -101,71 +99,90 @@ export default function ServicesLadder() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isMobile]);
 
-  // 📍 calcular posición REAL
   useEffect(() => {
     const el = cardRefs.current[active];
     const wrapper = document.querySelector(".ladder-wrapper");
 
-    if (el && wrapper) {
-      const rect = el.getBoundingClientRect();
-      const parentRect = wrapper.getBoundingClientRect();
+    if (!el || !wrapper) return;
 
-      setCursorPos({
-        x: rect.left - parentRect.left + rect.width / 2,
-        y: rect.top - parentRect.top + rect.height / 2,
-      });
-    }
+    const rect = el.getBoundingClientRect();
+    const parentRect = wrapper.getBoundingClientRect();
+
+    setCursorPos({
+      x: rect.left - parentRect.left + rect.width / 2,
+      y: rect.top - parentRect.top + rect.height / 2,
+    });
   }, [active]);
 
   return (
       <section className="services-ladder">
         <div className="services-container">
-
           <h2 className="services-title heading-h2">
-            Transformamos tu negocio invisible a digital <span>paso a paso</span>
+            Transformamos tu negocio invisible a digital{" "}
+            <span>paso a paso</span>
           </h2>
 
           <div className="ladder-wrapper">
-
-            {/* 🖱️ CURSOR */}
-            <div
-                className="cursor"
-                style={{
-                  left: cursorPos.x,
-                  top: cursorPos.y,
-                  transform: "translate(-50%, -50%)"
-                }}
-            >
-              <div className="cursor-icon">🖱️</div>
-              <div className="click-ring"></div>
-            </div>
+            {!isMobile && (
+                <div
+                    className="cursor"
+                    style={{
+                      left: cursorPos.x,
+                      top: cursorPos.y,
+                      transform: "translate(-50%, -50%)",
+                    }}
+                >
+                  <div className="cursor-icon">🖱️</div>
+                  <div className="click-ring" />
+                </div>
+            )}
 
             <div className="ladder">
-              {services.map((service, index) => (
-                  <div
-                      key={service.id}
-                      ref={(el) => {
-                        cardRefs.current[index] = el;
-                      }}
-                      className={`ladder-card ${active === index ? "active" : ""}`}
-                      style={{
-                        marginTop: `${(services.length - index - 1) * 60}px`
-                      }}
-                  >
-                    <div className="card-badge">Pack {service.id}</div>
+              {services.map((service, index) => {
+                const card = (
+                    <div
+                        ref={(el) => {
+                          cardRefs.current[index] = el;
+                        }}
+                        className={`ladder-card ${
+                            active === index ? "active" : ""
+                        }`}
+                        style={{
+                          marginTop: `${(services.length - index - 1) * 60}px`,
+                        }}
+                    >
+                      <div className="card-badge">Pack {service.id}</div>
 
-                    <h3 className="card-title">{service.title}</h3>
-                    <p className="card-desc">{service.desc}</p>
+                      <h3 className="card-title">{service.title}</h3>
+                      <p className="card-desc">{service.desc}</p>
 
-                    <ul>
-                      {service.items.map((item, i) => (
-                          <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-              ))}
+                      <ul>
+                        {service.items.map((item, i) => (
+                            <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                );
+
+                if (service.link) {
+                  return (
+                      <Link
+                          key={service.id}
+                          href={service.link}
+                          className="ladder-link"
+                      >
+                        {card}
+                      </Link>
+                  );
+                }
+
+                return (
+                    <div key={service.id} className="ladder-link">
+                      {card}
+                    </div>
+                );
+              })}
             </div>
-
           </div>
         </div>
       </section>

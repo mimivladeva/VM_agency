@@ -1,0 +1,59 @@
+/* CONTENEDOR IMAGEN */
+.service-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* IMAGEN */
+.service-image img {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 1.6rem;
+    object-fit: cover;
+
+    /* look premium */
+    box-shadow:
+            0 30px 60px rgba(0,0,0,0.15),
+            0 10px 30px rgba(0,0,0,0.08);
+
+    transition: all 0.3s ease;
+}
+
+/* HOVER SUAVE */
+.service-image img:hover {
+    transform: scale(1.02);
+}
+
+/* GLOW DETRÁS */
+.service-image::before {
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    border-radius: 2rem;
+
+    background: radial-gradient(
+            circle,
+            rgba(104,44,223,0.18),
+            rgba(8,186,204,0.15),
+            transparent 70%
+    );
+
+    filter: blur(40px);
+    z-index: -1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .service-hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .service-image img {
+        max-width: 100%;
+    }
+}

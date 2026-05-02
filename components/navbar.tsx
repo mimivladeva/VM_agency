@@ -10,20 +10,28 @@ import { useLanguage } from "@/lib/LanguageContext"
 
 
 
-export function Navbar() {
+export function Navbar({ forceActive = false }: { forceActive?: boolean }) {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [activeLink, setActiveLink] = useState<string | null>(null)
   const { lang, setLang } = useLanguage()
 
   useEffect(() => {
+    if (forceActive) {
+      setScrolled(true)
+      return
+    }
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 10)
     }
 
+    handleScroll()
     window.addEventListener("scroll", handleScroll)
+
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  }, [forceActive])
+
 
   // ✅ AHORA sí funciona porque lang existe aquí
   const navLinks = [

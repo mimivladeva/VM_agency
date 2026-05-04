@@ -118,8 +118,8 @@ export default function ServicesLadder() {
       <section className="services-ladder">
         <div className="services-container">
           <h2 className="services-title heading-h2">
-            Transformamos tu negocio invisible a digital{" "}
-            <span>paso a paso</span>
+           {" "}
+            <span>Servicios</span>
           </h2>
 
           <div className="ladder-wrapper">

@@ -87,7 +87,7 @@ const chaosItems = [
     {
         icon: Clock3,
         title: "El desorden te está costando dinero",
-        text: "Nada avanza si tú no lo validas cada pequeño paso y eso genera retrasos no puedes hacer todo.",
+        text: "Nada avanza si tú no validas cada pequeño paso y eso genera retrasos no puedes hacer todo.",
     },
     {
         icon: SearchX,
@@ -120,7 +120,7 @@ const solutionItems = [
     {
         icon: Sparkles,
         title: "Tu WEB empieza a convertir",
-        text: "Una presencia digital genera confianza, estratégica y enfocada en generar resultados.",
+        text: "Una presencia digital genera confianza, estratégica y resultados.",
     },
 ]
 
@@ -175,7 +175,7 @@ export default function BusinessConversionSection() {
                             </div>
 
                             <h3 className="business-panel-title heading-h3">
-                                Vas ocupado todo el día,
+                                Estas ocupado todo el día,
                                 <br />
                                 <span>pero tu negocio sigue sintiéndose fuera de control.</span>
                             </h3>

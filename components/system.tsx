@@ -28,10 +28,10 @@ const steps = [
         description:
             "Definimos una estructura clara: embudo, automatizaciones y experiencia para que todo trabaje en conjunto, no por separado.",
         bullets: [
-            "Embudo de conversión",
+            "Embudo de ventas",
             "Estrategia de captación",
             "Automatizaciones clave",
-            "Flujo completo del cliente",
+            "Guiar al cliente",
         ],
         icon: Globe,
         side: "left",
@@ -42,9 +42,9 @@ const steps = [
         description:
             "Desarrollamos una web pensada para guiar, convencer y convertir, conectada desde el primer momento con todo el sistema.",
         bullets: [
-            "Estructura orientada a ventas",
-            "Copy que guía decisiones",
-            "Diseño claro y responsive",
+            "Estructura orientada a resultados",
+            "Guia al cliente para tomar decisiones",
+            "Diseño unico y responsive",
             "Preparada para escalar",
         ],
         icon: Workflow,
@@ -52,14 +52,14 @@ const steps = [
     },
     {
         number: "4",
-        title: "Automatizamos y optimizamos",
+        title: "Automatizamos y Optimizacion",
         description:
-            "Integramos IA y automatizaciones para reducir trabajo manual y mejorar resultados sin depender constantemente de ti.",
+            "Integramos IA | Automatizaciones para reducir trabajo manual y mejorar resultados sin depender constantemente de ti.",
         bullets: [
             "Respuestas automáticas",
             "Seguimiento de leads",
             "Integración con CRM y herramientas",
-            "Optimización continua",
+            "Optimización progresiva",
         ],
         icon: Bot,
         side: "left",
@@ -106,7 +106,7 @@ export default function RoadmapSection() {
 
                         <p className="roadmap-subtitle">
                             No es una web suelta ni automatizaciones sin sentido.
-                            Construimos un sistema completo donde cada parte trabaja para generar clientes y hacer crecer tu negocio.
+                            Construimos un sistema donde cada parte trabaja para hacer crecer tu negocio.
                         </p>
                     </div>
                 </FadeInSection>
@@ -167,8 +167,8 @@ export default function RoadmapSection() {
                         <div className="roadmap-result-card">
 
                             <h3 className="roadmap-lead-title">
-                                ¿Aún tienes dudas? <br/>
-                                Te enviamos <span className="gradient-text">una guía personalizada</span>
+                                 <br/>
+                                Te enviamos <span className="gradient-text">un PDF con AutoDiagnóstico</span>
                             </h3>
 
                             <p className="roadmap-result-text">
@@ -205,12 +205,12 @@ export default function RoadmapSection() {
                             <div className="roadmap-features">
                                 <div className="feature">
                                     <FileText size={18}/>
-                                    <span>Análisis paso a paso</span>
+                                    <span>AutoDiagnóstico</span>
                                 </div>
 
                                 <div className="feature">
                                     <ShieldCheck size={18}/>
-                                    <span>100% gratuita</span>
+                                    <span>100% Gratis</span>
                                 </div>
 
                                 <div className="feature">

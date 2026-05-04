@@ -37,11 +37,11 @@ export function Footer() {
             <div className="footer-brand-card">
               <Link href="/" className="footer-logo">
                 <span className="footer-logo-vm">VM</span>
-                <span className="footer-logo-agency">Agency</span>
+                <span className="footer-logo-agency">Agencia</span>
               </Link>
 
               <p className="footer-brand-text">
-                Transformamos negocios con tecnología, diseño y automatización.
+                Transformamos negocios tradicionales con tecnología, diseño y automatización.
                 Creamos sistemas digitales pensados para atraer, convertir y escalar.
               </p>
 
@@ -89,7 +89,7 @@ export function Footer() {
                       <div className="footer-contact-icon-wrap">
                         <Mail className="footer-contact-icon"/>
                       </div>
-                      <span className="footer-contact-text">hola@vmagency.com</span>
+                      <span className="footer-contact-text">vmmarketing.ia@gmail.com</span>
                     </a>
                   </li>
 
@@ -129,7 +129,7 @@ export function Footer() {
 
           <div className="footer-bottom">
             <p className="footer-copy">
-              © {new Date().getFullYear()} VM Agency. Todos los derechos reservados.
+              © {new Date().getFullYear()} VM Agencia. Todos los derechos reservados.
             </p>
           </div>
         </div>

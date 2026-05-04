@@ -107,10 +107,21 @@ export function Footer() {
                     </a>
                   </li>
                 </ul>
-
-                <Link href="#contactar" className="footer-cta-link">
+                {/* DESKTOP SIMPLE */}
+                <Link href="#contactar" className="footer-cta-link desktop-only">
                   Hablemos de tu proyecto
                   <ArrowUpRight className="footer-cta-arrow"/>
+                </Link>
+
+                {/* MOBILE CARD */}
+                <Link href="#contactar" className="footer-cta-card mobile-only">
+                  <div className="footer-cta-content">
+                    <span className="footer-cta-title">Hablemos de tu proyecto</span>
+                    <span className="footer-cta-sub">
+      Cuéntanos tu idea y te ayudamos a hacerla crecer.
+    </span>
+                  </div>
+                  <ArrowUpRight className="footer-cta-icon"/>
                 </Link>
               </div>
             </div>

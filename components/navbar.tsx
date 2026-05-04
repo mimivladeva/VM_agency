@@ -35,10 +35,10 @@ export function Navbar({ forceActive = false }: { forceActive?: boolean }) {
 
   // ✅ AHORA sí funciona porque lang existe aquí
   const navLinks = [
-    { href: "#home", label: translations[lang].home },
-    { href: "#proyectos", label: translations[lang].proyectos },
-    { href: "#servicios", label: translations[lang].servicios },
-    { href: "#contactar", label: translations[lang].contactar },
+    { href: "/#home", label: translations[lang].home },
+    { href: "/#servicios", label: translations[lang].servicios },
+    { href: "/#proyectos", label: translations[lang].proyectos },
+    { href: "/#contactar", label: translations[lang].contactar },
     { href: "/faq", label: translations[lang].faq }
   ]
 

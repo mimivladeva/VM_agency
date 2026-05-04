@@ -139,7 +139,7 @@
 }
 
 .footer-column {
-    padding: 0.5rem 0 0.5rem 0.5rem;
+    padding: 0;
 }
 
 .footer-title {
@@ -264,6 +264,80 @@
     font-weight: 700;
     transition: color 0.2s ease;
 }
+/* TARJETA CTA */
+/* CONTROL VISIBILIDAD */
+.desktop-only {
+    display: inline-flex;
+}
+
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: flex;
+    }
+}
+.footer-cta-card {
+    margin-top: 1.5rem;
+
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem 1.2rem;
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(10px);
+
+    transition: all 0.3s ease;
+}
+
+.footer-cta-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.12);
+}
+
+/* TEXTO */
+.footer-cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.footer-cta-title {
+    color: var(--footer-white);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.footer-cta-sub {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.7);
+}
+
+/* ICONO */
+.footer-cta-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--footer-white);
+
+    transition: transform 0.2s ease;
+}
+
+.footer-cta-card:hover .footer-cta-icon {
+    transform: translate(3px, -3px);
+}
 
 .footer-cta-link:hover {
     color: var(--footer-orange);
@@ -294,17 +368,24 @@
     color: rgba(255, 255, 255, 0.72);
 }
 @media (max-width: 1024px) {
+    .mobile-only {
+        display: flex;
+    }
     .footer-top {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
     .footer-links-area {
+        padding-left: 0.8rem; /* espacio real */
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 768px) {
+    .footer-title {
+        color: var(--footer-white);
+    }
     .footer-container {
         width: min(100% - 1.25rem, 1200px);
         padding: 3.5rem 0 1.25rem;
@@ -317,7 +398,7 @@
 
     .footer-links-area {
         grid-template-columns: 1fr;
-        gap: 1.2rem;
+        gap: 2.2rem;
     }
 
     .footer-column {
@@ -326,7 +407,8 @@
 
     .footer-bottom {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;     /* ✅ centrar horizontal */
+        text-align: center;      /* ✅ centrar texto */
     }
 
     .footer-logo-vm,

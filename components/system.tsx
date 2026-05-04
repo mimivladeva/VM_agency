@@ -2,6 +2,7 @@
 
 import "@/components/css/system.css"
 import "@/components/css/typography.css"
+import { FileText, ShieldCheck, Lock } from "lucide-react"
 import { motion } from "framer-motion"
 import { Search, Globe, Bot, Workflow, ArrowRight } from "lucide-react"
 import type { ReactNode } from "react"
@@ -164,17 +165,60 @@ export default function RoadmapSection() {
                 <FadeInSection>
                     <div className="roadmap-result-wrapper">
                         <div className="roadmap-result-card">
-                            <span className="roadmap-result-badge">Resultado</span>
+
+                            <h3 className="roadmap-lead-title">
+                                ¿Aún tienes dudas? <br/>
+                                Te enviamos <span className="gradient-text">una guía personalizada</span>
+                            </h3>
 
                             <p className="roadmap-result-text">
-                                Un sistema que atrae clientes, los convierte y organiza tu negocio
-                                para que puedas crecer sin depender de apagar fuegos constantemente.
+                                Recibe en tu correo una guía en PDF para que puedas analizar tu negocio por tu cuenta,
+                                detectar problemas y entender cómo mejorar tus resultados.
                             </p>
 
-                            <button className="roadmap-result-button">
-                                Ver cómo lo aplicaríamos a tu negocio
-                                <ArrowRight className="roadmap-button-arrow" size={18} />
-                            </button>
+                            <form className="roadmap-form">
+                                <div className="roadmap-input-group">
+
+                                    {/* ICONO EMAIL */}
+                                    <div className="roadmap-input-icon">
+                                        <svg width="18" height="18" fill="none">
+                                            <path d="M2 4h14v10H2z" stroke="currentColor" strokeWidth="1.5"/>
+                                            <path d="M2 4l7 6 7-6" stroke="currentColor" strokeWidth="1.5"/>
+                                        </svg>
+                                    </div>
+
+                                    <input
+                                        type="email"
+                                        placeholder="Tu correo electrónico"
+                                        className="roadmap-input"
+                                        required
+                                    />
+
+                                    <button type="submit" className="roadmap-submit">
+                                        Recibir guía
+                                        <ArrowRight size={16}/>
+                                    </button>
+                                </div>
+                            </form>
+
+                            {/* ICONOS INFERIORES */}
+                            <div className="roadmap-features">
+                                <div className="feature">
+                                    <FileText size={18}/>
+                                    <span>Análisis paso a paso</span>
+                                </div>
+
+                                <div className="feature">
+                                    <ShieldCheck size={18}/>
+                                    <span>100% gratuita</span>
+                                </div>
+
+                                <div className="feature">
+                                    <Lock size={18}/>
+                                    <span>Sin compromiso</span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </FadeInSection>

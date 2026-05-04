@@ -20,13 +20,32 @@ export default function Home() {
 
                 <div className="relative z-10">
                     <Navbar/>
-                    <HeroSection/>
-                    <ServicesLadder/>
-                    <BackgroundImage />
-                    <BusinessConversionSection/>
-                    <AutomationProgramSection/>
-                    <ProjectsSection/>
-                    <CTASection/>
+                    <section id="home">
+                        <HeroSection/>
+                    </section>
+
+                    <section id="servicios">
+                        <ServicesLadder/>
+                    </section>
+
+                    <BackgroundImage/>
+
+                    <section id="conversion">
+                        <BusinessConversionSection/>
+                    </section>
+
+                    <section id="automatizacion">
+                        <AutomationProgramSection/>
+                    </section>
+
+                    <section id="proyectos">
+                        <ProjectsSection/>
+                    </section>
+
+                    <section id="contactar">
+                        <CTASection/>
+                    </section>
+
                     <Footer/>
                 </div>
 

@@ -143,3 +143,44 @@
   }
 
 }
+
+/* ===== SCROLLBAR GLOBAL VM AGENCY ===== */
+
+/* ============================================
+   Custom Scrollbar VM Agency (Clean Style)
+   ============================================ */
+
+/* CHROME / EDGE / SAFARI */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(8, 186, 204, 0.08); /* fondo suave */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+          135deg,
+          #682cdf,
+          #08bacc,
+          #52d3d8
+  );
+  border-radius: 999px;
+}
+
+/* Hover sutil */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+          135deg,
+          #08bacc,
+          #52d3d8,
+          #ff914d
+  );
+}
+
+/* FIREFOX */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #08bacc rgba(8, 186, 204, 0.08);
+}

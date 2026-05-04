@@ -118,6 +118,8 @@ export function ProjectsSection() {
 
   const previewRef = useRef<HTMLDivElement | null>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [hoverEnabled, setHoverEnabled] = useState(true);
+  
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -156,9 +158,14 @@ export function ProjectsSection() {
                 return (
                     <Card
                         key={project.id}
-                        onMouseEnter={() => setActiveProject(project)}
+                        onMouseEnter={() => {
+                          if (hoverEnabled) {
+                            setActiveProject(project);
+                          }
+                        }}
                         onClick={() => {
                           setActiveProject(project);
+                          setHoverEnabled(false);
 
                           if (isMobile) {
                             setTimeout(() => {

@@ -5,16 +5,19 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import { translations, Lang } from "@/lib/i18n"
-import { useLanguage } from "@/lib/LanguageContext"
-
-
+import { useTranslations, useLocale } from "next-intl"
+import { useRouter, usePathname } from "next/navigation"
 
 export function Navbar({ forceActive = false }: { forceActive?: boolean }) {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [activeLink, setActiveLink] = useState<string | null>(null)
-  const { lang, setLang } = useLanguage()
+
+  const t = useTranslations("Navbar")
+  const locale = useLocale()
+
+  const router = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
     if (forceActive) {
@@ -32,15 +35,27 @@ export function Navbar({ forceActive = false }: { forceActive?: boolean }) {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [forceActive])
 
-
-  // ✅ AHORA sí funciona porque lang existe aquí
+  // 🔥 LINKS CON LOCALE
   const navLinks = [
-    { href: "/#home", label: translations[lang].home },
-    { href: "/#servicios", label: translations[lang].servicios },
-    { href: "/#proyectos", label: translations[lang].proyectos },
-    { href: "/#contactar", label: translations[lang].contactar },
-    { href: "/faq", label: translations[lang].faq }
+    { href: `/${locale}#home`, label: t("home") },
+    { href: `/${locale}#servicios`, label: t("servicios") },
+    { href: `/${locale}#proyectos`, label: t("proyectos") },
+    { href: `/${locale}#contactar`, label: t("contactar") },
+    { href: `/${locale}/faq`, label: t("faq") }
   ]
+
+  // 🔥 CAMBIO DE IDIOMA REAL
+  const changeLanguage = (newLocale: "es" | "en" | "bg") => {
+    const segments = pathname.split("/")
+
+    if (["es", "en", "bg"].includes(segments[1])) {
+      segments[1] = newLocale
+    } else {
+      segments.splice(1, 0, newLocale)
+    }
+
+    router.push(segments.join("/"))
+  }
 
   return (
       <nav className="fixed top-0 left-0 right-0 z-50">
@@ -60,7 +75,7 @@ export function Navbar({ forceActive = false }: { forceActive?: boolean }) {
             <div className="flex items-center justify-between h-16 lg:h-20">
 
               {/* LOGO */}
-              <Link href="/" className="flex items-center gap-2">
+              <Link href={`/${locale}`} className="flex items-center gap-2">
                 <div className="relative inline-block group">
                   <div className="absolute inset-0 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition duration-300 bg-gradient-to-r from-[#FDE259] to-[#F88A4B]" />
 
@@ -92,11 +107,11 @@ export function Navbar({ forceActive = false }: { forceActive?: boolean }) {
                 {["es", "en", "bg"].map((lng) => (
                     <button
                         key={lng}
-                        onClick={() => setLang(lng as Lang)}
+                        onClick={() => changeLanguage(lng as any)}
                         className={`
                     text-sm font-semibold px-2 py-1 rounded transition
                     ${
-                            lang === lng
+                            locale === lng
                                 ? "bg-white text-black"
                                 : "text-white/80 hover:text-white"
                         }
@@ -130,9 +145,9 @@ export function Navbar({ forceActive = false }: { forceActive?: boolean }) {
                     {["es", "en", "bg"].map((lng) => (
                         <button
                             key={lng}
-                            onClick={() => setLang(lng as Lang)}
+                            onClick={() => changeLanguage(lng as any)}
                             className={`px-3 py-1 rounded ${
-                                lang === lng
+                                locale === lng
                                     ? "bg-white text-black"
                                     : "text-white/80"
                             }`}

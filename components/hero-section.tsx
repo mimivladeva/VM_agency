@@ -3,43 +3,38 @@
 import "@/components/css/hero.css"
 import { HeroBackground } from "@/components/hero/HeroBackground"
 import GlowButton from "@/components/hero/GlowButton"
-import {HeroVisual} from "@/components/hero/HeroVisual";
+import { HeroVisual } from "@/components/hero/HeroVisual"
 import NeuralStatic from "@/components/hero/NeuralStatic"
-import { useLanguage } from "@/lib/LanguageContext"
+import { useTranslations } from "next-intl"
 
 export function HeroSection() {
+    const t = useTranslations("Hero")
 
     return (
         <section className="hero-section">
-            {/* Capa degradado superior */}
             <div className="hero-top-gradient" />
 
-            {/* Background */}
             <HeroBackground />
-            {/* Elementos visuales (manos + bola) */}
-
             <NeuralStatic />
             <HeroVisual />
 
-            {/* Overlay general */}
             <div className="hero-overlay" />
 
-            {/* Contenido */}
             <div className="hero-content">
                 <h1 className="hero-title">
-                    Transformamos tu negocio{" "}
+                    {t("line1")}{" "}
                     <span className="hero-title-system">
-                        invisible
-                    </span>{" "}
-                    en{" "}
+            {t("highlight1")}
+          </span>{" "}
+                    {t("line2")}{" "}
                     <span className="hero-title-impulsa">
-                     digital
-                    </span>{" "}
-                    que genera clientes
+            {t("highlight2")}
+          </span>{" "}
+                    {t("line3")}
                 </h1>
 
                 <p className="hero-subtitle">
-                    Diseñamos Páginas Web |  Apps |  IA y Automatizaciones | para ahorrar tiempo y generar ventas
+                    {t("subtitle")}
                 </p>
 
                 <div className="hero-button-wrapper">

@@ -1,0 +1,59 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "servicios": "Services",
+    "proyectos": "Projects",
+    "contactar": "Contact",
+    "faq": "FAQ"
+  },
+  "Hero": {
+    "line1": "We transform your",
+    "highlight1": "invisible",
+    "line2": "business into",
+    "highlight2": "digital",
+    "line3": "that generates clients",
+    "subtitle": "We design Websites | Apps | AI and Automations | to save time and generate sales",
+    "cta": "Book your call"
+  },
+  "Services": {
+    "title": "Services",
+    "pack": "Pack",
+    "pack1": {
+      "title": "Digital presence",
+      "desc": "A foundational entry point for your business to exist and be understood online.",
+      "items": ["Website", "Strategic copywriting", "Basic SEO"]
+    },
+    "pack2": {
+      "title": "Client acquisition",
+      "desc": "You begin turning visitors into real business opportunities.",
+      "items": [
+        "Marketing strategy",
+        "Sales funnels",
+        "Client automation",
+        "WhatsApp, email and forms"
+      ]
+    },
+    "pack3": {
+      "title": "Automation & AI",
+      "desc": "Your system works for you while you scale.",
+      "items": [
+        "Automation of repetitive processes",
+        "Automated responses (web, WhatsApp, email)",
+        "Intelligent chatbots",
+        "Automated client follow-up",
+        "AI to classify and support business decisions"
+      ]
+    },
+    "pack4": {
+      "title": "Analytics & optimization",
+      "desc": "Data-driven decisions to grow without friction.",
+      "items": [
+        "Data analysis",
+        "Conversion optimization",
+        "Advanced AI integrations",
+        "Custom-built apps"
+      ]
+    }
+  }
+
+}

@@ -1,0 +1,60 @@
+{
+  "Navbar": {
+    "home": "Inicio",
+    "servicios": "Servicios",
+    "proyectos": "Proyectos",
+    "contactar": "Contactar",
+    "faq": "FAQ"
+  },
+
+  "Hero": {
+    "line1": "Transformamos tu negocio",
+    "highlight1": "invisible",
+    "line2": "en",
+    "highlight2": "digital",
+    "line3": "que genera clientes",
+    "subtitle": "Diseñamos Páginas Web | Apps | IA y Automatizaciones | para ahorrar tiempo y generar ventas",
+    "cta": "Agenda tu llamada"
+  },
+  "Services": {
+    "title": "Servicios",
+    "pack": "Pack",
+    "pack1": {
+      "title": "Presencia digital",
+      "desc": "Entrada básica para que tu negocio exista y se entienda online.",
+      "items": ["Página web", "Copywriting con sentido", "SEO básico"]
+    },
+    "pack2": {
+      "title": "Captación de clientes",
+      "desc": "Empiezas a convertir visitas en oportunidades reales.",
+      "items": [
+        "Estrategia de marketing",
+        "Embudos de venta",
+        "Automatización de clientes",
+        "WhatsApp, email y formularios"
+      ]
+    },
+    "pack3": {
+      "title": "Automatización e IA",
+      "desc": "El sistema trabaja por ti mientras tú escalas.",
+      "items": [
+        "Automatización de procesos repetitivos",
+        "Respuestas automáticas (web, WhatsApp, email)",
+        "Chatbots inteligentes",
+        "Seguimiento automático de clientes",
+        "IA para clasificar y ayudar al negocio"
+      ]
+    },
+    "pack4": {
+      "title": "Análisis y optimización",
+      "desc": "Decisiones basadas en datos para crecer sin fricción.",
+      "items": [
+        "Análisis de datos",
+        "Optimización de conversiones",
+        "Integraciones avanzadas con IA",
+        "Apps a medida"
+      ]
+    }
+  }
+
+}

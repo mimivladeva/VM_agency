@@ -54,6 +54,60 @@
         "Custom-built apps"
       ]
     }
+  },
+  "Business": {
+    "eyebrow": "Without a digital presence, you don’t exist",
+    "title": "Is your business a burden or a system?",
+    "subtitle": "We help local businesses with little or no digital presence transform and scale. We increase your visibility, attract more clients, and save you time.",
+
+    "chaos": {
+      "badge": "Traditional business: chaos, overload and lost clients",
+      "title": "You’re busy all day, but your business still feels out of control.",
+      "description": "There’s activity, messages, work... but also delays, disorganization and missed opportunities slipping through unnoticed.",
+      "items": [
+        {
+          "title": "Messages keep piling up",
+          "text": "You reply too late and every minute cools down a potential sale. WhatsApp, Instagram and email everywhere."
+        },
+        {
+          "title": "Disorganization is costing you money",
+          "text": "Nothing moves forward unless you validate every small step. It creates bottlenecks and you can’t do everything."
+        },
+        {
+          "title": "Lost opportunities",
+          "text": "Leads come in, but there’s no filtering, follow-up or real control over opportunities."
+        },
+        {
+          "title": "No website, no visibility",
+          "text": "If you’re not online, you don’t exist for your customers. You depend entirely on word of mouth."
+        }
+      ]
+    },
+
+    "solution": {
+      "badge": "VM System Business: structure, control and real growth",
+      "title": "Your business now runs on a system. More clients, more structure, more trust and automated workflows.",
+      "description": "Less improvisation, fewer repetitive tasks and full control over every client, process and sales opportunity.",
+      "items": [
+        {
+          "title": "AI handles responses and filtering",
+          "text": "Faster communication, automatic lead qualification and fewer lost clients."
+        },
+        {
+          "title": "Your processes stop being manual",
+          "text": "Less operational chaos and more time to sell, lead and grow."
+        },
+        {
+          "title": "Every client enters a system",
+          "text": "Lead capture, follow-up and control in a clear and measurable workflow."
+        },
+        {
+          "title": "Your website starts converting",
+          "text": "A strong digital presence builds trust and drives real results."
+        }
+      ]
+    }
   }
+
 
 }

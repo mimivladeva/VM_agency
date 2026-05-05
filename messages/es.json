@@ -55,6 +55,61 @@
         "Apps a medida"
       ]
     }
+  },
+
+  "Business": {
+    "eyebrow": "Sin presencia digital no existes",
+    "title": "¿Tu negocio es una carga o un sistema?",
+    "subtitle": "Ayudamos a negocios locales sin presencia digital al la transformacion digital. Escalamos tu negocio, damos visibilidad, aumentamos clientes y ahorramos tiempo",
+
+    "chaos": {
+      "badge": "Negocio Tradicional: caos, saturación y fuga de clientes",
+      "title": "Estas ocupado todo el día, pero tu negocio sigue sintiéndose fuera de control.",
+      "description": "Tienes movimiento, mensajes, trabajo... pero también retrasos, desorden y oportunidades que desaparecen sin que te des cuenta.",
+      "items": [
+        {
+          "title": "Los mensajes se acumulan",
+          "text": "Respondes tarde y cada minuto enfría una venta. WhatsApp, Instagram y email por todas partes."
+        },
+        {
+          "title": "El desorden te está costando dinero",
+          "text": "Nada avanza si tú no validas cada pequeño paso y eso genera retrasos no puedes hacer todo."
+        },
+        {
+          "title": "Pérdida de Oportunidades",
+          "text": "Entran contactos, pero no hay filtro, seguimiento ni control real de las oportunidades."
+        },
+        {
+          "title": "Negocio Sin WEB",
+          "text": "Si no estas en internet no existes para el cliente, dependes solo del boca a boca"
+        }
+      ]
+    },
+
+    "solution": {
+      "badge": "Negocio VM Sistema: orden, control y crecimiento real",
+      "title": "Tu negocio ahora tiene un sistema, Consigues mas clientes, orden, confianza y tareas automatizadas",
+      "description": "Menos improvisación, menos tareas repetitivas y más control sobre cada cliente, cada proceso y cada oportunidad de venta.",
+      "items": [
+        {
+          "title": "La IA responde y filtra por ti",
+          "text": "Atención más rápida, clasificación automática y menos fugas de clientes."
+        },
+        {
+          "title": "Tus procesos dejan de ser manuales",
+          "text": "Menos caos operativo y más tiempo para vender, dirigir y crecer."
+        },
+        {
+          "title": "Cada cliente entra en un sistema",
+          "text": "Captación, seguimiento y control en un flujo claro y medible."
+        },
+        {
+          "title": "Tu WEB empieza a convertir",
+          "text": "Una presencia digital genera confianza, estratégica y resultados."
+        }
+      ]
+    }
   }
+
 
 }

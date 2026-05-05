@@ -14,60 +14,39 @@ import {
     Sparkles,
     ArrowRight,
 } from "lucide-react"
+import { useTranslations } from "next-intl"
 import "@/components/css/typography.css"
 import "@/components/css/BusinessConversionSection.css"
 
 const containerVariants: Variants = {
     hidden: {},
-    show: {
-        transition: {
-            staggerChildren: 0.12,
-        },
-    },
+    show: { transition: { staggerChildren: 0.12 } },
 }
 
 const fadeUp: Variants = {
-    hidden: {
-        opacity: 0,
-        y: 50,
-    },
+    hidden: { opacity: 0, y: 50 },
     show: {
         opacity: 1,
         y: 0,
-        transition: {
-            duration: 0.8,
-            ease: [0.22, 1, 0.36, 1],
-        },
+        transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
     },
 }
 
 const slideLeft: Variants = {
-    hidden: {
-        opacity: 0,
-        x: -50,
-    },
+    hidden: { opacity: 0, x: -50 },
     show: {
         opacity: 1,
         x: 0,
-        transition: {
-            duration: 0.85,
-            ease: [0.22, 1, 0.36, 1],
-        },
+        transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] },
     },
 }
 
 const slideRight: Variants = {
-    hidden: {
-        opacity: 0,
-        x: 50,
-    },
+    hidden: { opacity: 0, x: 50 },
     show: {
         opacity: 1,
         x: 0,
-        transition: {
-            duration: 0.85,
-            ease: [0.22, 1, 0.36, 1],
-        },
+        transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] },
     },
 }
 
@@ -78,53 +57,55 @@ const itemFade = (delay: number) => ({
     transition: { duration: 0.6, delay },
 })
 
-const chaosItems = [
-    {
-        icon: MessageCircleMore,
-        title: "Los mensajes se acumulan",
-        text: "Respondes tarde y cada minuto enfría una venta. WhatsApp, Instagram y email por todas partes.",
-    },
-    {
-        icon: Clock3,
-        title: "El desorden te está costando dinero",
-        text: "Nada avanza si tú no validas cada pequeño paso y eso genera retrasos no puedes hacer todo.",
-    },
-    {
-        icon: SearchX,
-        title: "Pérdida de Oportunidades",
-        text: "Entran contactos, pero no hay filtro, seguimiento ni control real de las oportunidades.",
-    },
-    {
-        icon: Globe2,
-        title: "Negocio Sin WEB",
-        text: "Si no estas en internet no existes para el cliente, dependes solo del boca a boca",
-    },
-]
-
-const solutionItems = [
-    {
-        icon: Bot,
-        title: "La IA responde y filtra por ti",
-        text: "Atención más rápida, clasificación automática y menos fugas de clientes.",
-    },
-    {
-        icon: Workflow,
-        title: "Tus procesos dejan de ser manuales",
-        text: "Menos caos operativo y más tiempo para vender, dirigir y crecer.",
-    },
-    {
-        icon: ChartNoAxesCombined,
-        title: "Cada cliente entra en un sistema",
-        text: "Captación, seguimiento y control en un flujo claro y medible.",
-    },
-    {
-        icon: Sparkles,
-        title: "Tu WEB empieza a convertir",
-        text: "Una presencia digital genera confianza, estratégica y resultados.",
-    },
-]
-
 export default function BusinessConversionSection() {
+    const t = useTranslations("Business")
+
+    const chaosItems = [
+        {
+            icon: MessageCircleMore,
+            title: t("chaos.items.0.title"),
+            text: t("chaos.items.0.text"),
+        },
+        {
+            icon: Clock3,
+            title: t("chaos.items.1.title"),
+            text: t("chaos.items.1.text"),
+        },
+        {
+            icon: SearchX,
+            title: t("chaos.items.2.title"),
+            text: t("chaos.items.2.text"),
+        },
+        {
+            icon: Globe2,
+            title: t("chaos.items.3.title"),
+            text: t("chaos.items.3.text"),
+        },
+    ]
+
+    const solutionItems = [
+        {
+            icon: Bot,
+            title: t("solution.items.0.title"),
+            text: t("solution.items.0.text"),
+        },
+        {
+            icon: Workflow,
+            title: t("solution.items.1.title"),
+            text: t("solution.items.1.text"),
+        },
+        {
+            icon: ChartNoAxesCombined,
+            title: t("solution.items.2.title"),
+            text: t("solution.items.2.text"),
+        },
+        {
+            icon: Sparkles,
+            title: t("solution.items.3.title"),
+            text: t("solution.items.3.text"),
+        },
+    ]
+
     return (
         <section className="business-conversion-section">
             <div className="business-conversion-bg">
@@ -143,20 +124,15 @@ export default function BusinessConversionSection() {
                 >
                     <motion.div className="business-conversion-eyebrow" variants={fadeUp}>
                         <AlertTriangle size={16} />
-                        <span>Sin presencia digital no existes</span>
+                        <span>{t("eyebrow")}</span>
                     </motion.div>
 
-                    <motion.h2
-                        className="business-conversion-title heading-h2"
-                        variants={fadeUp}
-                    >
-                        
-                        <br />
-                        <span>¿Tu negocio es una carga o un sistema?</span>
+                    <motion.h2 className="business-conversion-title heading-h2" variants={fadeUp}>
+                        <span>{t("title")}</span>
                     </motion.h2>
 
                     <motion.p className="business-conversion-subtitle" variants={fadeUp}>
-                        Ayudamos a negocios locales sin presencia digital al la transformacion digital. Escalamos tu negocio, damos visibilidad, aumentamos clientes y ahorramos tiempo
+                        {t("subtitle")}
                     </motion.p>
                 </motion.div>
 
@@ -171,25 +147,21 @@ export default function BusinessConversionSection() {
                         <div className="business-panel-top">
                             <div className="business-panel-badge business-panel-badge-chaos">
                                 <Frown size={16} />
-                                <span>Negocio Tradicional: caos, saturación y fuga de clientes</span>
+                                <span>{t("chaos.badge")}</span>
                             </div>
 
                             <h3 className="business-panel-title heading-h3">
-                                Estas ocupado todo el día,
-                                <br />
-                                <span>pero tu negocio sigue sintiéndose fuera de control.</span>
+                                {t("chaos.title")}
                             </h3>
 
                             <p className="business-panel-description">
-                                Tienes movimiento, mensajes, trabajo... pero también retrasos,
-                                desorden y oportunidades que desaparecen sin que te des cuenta.
+                                {t("chaos.description")}
                             </p>
                         </div>
 
                         <div className="business-points">
                             {chaosItems.map((item, index) => {
                                 const Icon = item.icon
-
                                 return (
                                     <motion.div
                                         className="business-point business-point-chaos"
@@ -199,7 +171,6 @@ export default function BusinessConversionSection() {
                                         <div className="business-point-icon">
                                             <Icon size={20} />
                                         </div>
-
                                         <div className="business-point-content">
                                             <h4 className="card-title">{item.title}</h4>
                                             <p>{item.text}</p>
@@ -210,13 +181,7 @@ export default function BusinessConversionSection() {
                         </div>
                     </motion.article>
 
-                    <motion.div
-                        className="business-conversion-divider"
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true, amount: 0.4 }}
-                        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                    >
+                    <motion.div className="business-conversion-divider">
                         <div className="business-conversion-divider-line" />
                         <div className="business-conversion-divider-center">
                             <ArrowRight size={18} />
@@ -234,25 +199,21 @@ export default function BusinessConversionSection() {
                         <div className="business-panel-top">
                             <div className="business-panel-badge business-panel-badge-solution">
                                 <Sparkles size={16} />
-                                <span>Negocio VM Sistema: orden, control y crecimiento real</span>
+                                <span>{t("solution.badge")}</span>
                             </div>
 
                             <h3 className="business-panel-title heading-h3">
-                                Tu negocio ahora tiene un sistema,
-                                <br />
-                                <span>Consigues mas clientes, orden, confianza y tareas automatizadas</span>
+                                {t("solution.title")}
                             </h3>
 
                             <p className="business-panel-description">
-                                Menos improvisación, menos tareas repetitivas y más control sobre cada
-                                cliente, cada proceso y cada oportunidad de venta.
+                                {t("solution.description")}
                             </p>
                         </div>
 
                         <div className="business-points">
                             {solutionItems.map((item, index) => {
                                 const Icon = item.icon
-
                                 return (
                                     <motion.div
                                         className="business-point business-point-solution"
@@ -262,7 +223,6 @@ export default function BusinessConversionSection() {
                                         <div className="business-point-icon">
                                             <Icon size={20} />
                                         </div>
-
                                         <div className="business-point-content">
                                             <h4 className="card-title">{item.title}</h4>
                                             <p>{item.text}</p>

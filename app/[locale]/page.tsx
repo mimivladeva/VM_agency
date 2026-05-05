@@ -14,35 +14,36 @@ export default function Home() {
             <div className="fixed inset-0 bg-background/60 -z-10" />
 
             <div className="relative z-10">
-                <Navbar />
+                <Navbar/>
 
                 <section id="home">
-                    <HeroSection />
+                    <HeroSection/>
+                </section>
+
+                <section id="conversion">
+                    <BusinessConversionSection/>
                 </section>
 
                 <section id="servicios">
-                    <ServicesLadder />
+                    <ServicesLadder/>
                 </section>
 
-                <BackgroundImage />
+                <BackgroundImage/>
 
-                <section id="conversion">
-                    <BusinessConversionSection />
-                </section>
 
                 <section id="automatizacion">
-                    <AutomationProgramSection />
+                    <AutomationProgramSection/>
                 </section>
 
                 <section id="proyectos">
-                    <ProjectsSection />
+                    <ProjectsSection/>
                 </section>
 
                 <section id="contactar">
-                    <CTASection />
+                    <CTASection/>
                 </section>
 
-                <Footer />
+                <Footer/>
             </div>
         </main>
     )

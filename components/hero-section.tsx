@@ -6,9 +6,13 @@ import GlowButton from "@/components/hero/GlowButton"
 import { HeroVisual } from "@/components/hero/HeroVisual"
 import NeuralStatic from "@/components/hero/NeuralStatic"
 import { useTranslations } from "next-intl"
+import { useLocale } from "next-intl"
 
 export function HeroSection() {
     const t = useTranslations("Hero")
+    const locale = useLocale()
+
+    const isBulgarian = locale === "bg"
 
     return (
         <section className="hero-section">
@@ -21,15 +25,15 @@ export function HeroSection() {
             <div className="hero-overlay" />
 
             <div className="hero-content">
-                <h1 className="hero-title">
+                <h1 className={`hero-title ${isBulgarian ? "hero-title-bg" : ""}`}>
                     {t("line1")}{" "}
                     <span className="hero-title-system">
-            {t("highlight1")}
-          </span>{" "}
+                        {t("highlight1")}
+                    </span>{" "}
                     {t("line2")}{" "}
                     <span className="hero-title-impulsa">
-            {t("highlight2")}
-          </span>{" "}
+                        {t("highlight2")}
+                    </span>{" "}
                     {t("line3")}
                 </h1>
 

@@ -109,7 +109,70 @@
         }
       ]
     }
+  },
+
+  "System": {
+    "title": "Así construimos tu sistema",
+    "highlight": "paso a paso",
+    "subtitle": "No es una web suelta ni automatizaciones sin sentido. Construimos un sistema donde cada parte trabaja para hacer crecer tu negocio.",
+
+    "steps": [
+      {
+        "title": "Diagnósticamos y analizamos tu Negocio",
+        "description": "Antes de tocar diseño o tecnología, analizamos tu negocio y detectamos si podemos trabajar juntos",
+        "bullets": [
+          "¿Cómo estás captando clientes ahora?",
+          "¿Cuánto dinero estas perdiendo por no tener presencia digital?",
+          "¿Dónde abandona tu cliente?",
+          "¿Podemos trabajar contigo?"
+        ]
+      },
+      {
+        "title": "Diseñamos el VM Sistema",
+        "description": "Definimos una estructura clara: embudo, automatizaciones y experiencia para que todo trabaje en conjunto, no por separado.",
+        "bullets": [
+          "Embudo de ventas",
+          "Estrategia de captación",
+          "Automatizaciones clave",
+          "Guiar al cliente"
+        ]
+      },
+      {
+        "title": "Construimos una web que convierte",
+        "description": "Desarrollamos una web pensada para guiar, convencer y convertir, conectada desde el primer momento con todo el sistema.",
+        "bullets": [
+          "Estructura orientada a resultados",
+          "Guia al cliente para tomar decisiones",
+          "Diseño unico y responsive",
+          "Preparada para escalar"
+        ]
+      },
+      {
+        "title": "Automatizamos y Optimizacion",
+        "description": "Integramos IA | Automatizaciones para reducir trabajo manual y mejorar resultados sin depender constantemente de ti.",
+        "bullets": [
+          "Respuestas automáticas",
+          "Seguimiento de leads",
+          "Integración con CRM y herramientas",
+          "Optimización progresiva"
+        ]
+      }
+    ],
+
+    "result": {
+      "title": "Te enviamos",
+      "highlight": "un PDF con AutoDiagnóstico",
+      "description": "Recibe en tu correo una guía en PDF para que puedas analizar tu negocio por tu cuenta, detectar problemas y entender cómo mejorar tus resultados.",
+      "placeholder": "Tu correo electrónico",
+      "cta": "Recibir guía",
+      "features": [
+        "AutoDiagnóstico",
+        "100% Gratis",
+        "Sin compromiso"
+      ]
+    }
   }
+
 
 
 }

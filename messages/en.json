@@ -107,7 +107,65 @@
         }
       ]
     }
+  },
+  "System": {
+    "title": "This is how we build your system",
+    "highlight": "step by step",
+    "subtitle": "This is not just a website or random automations. We build a system where every part works together to grow your business.",
+
+    "steps": [
+      {
+        "title": "We diagnose and analyze your business",
+        "description": "Before touching design or technology, we analyze your business and determine if we’re a good fit.",
+        "bullets": [
+          "How are you currently acquiring clients?",
+          "How much money are you losing without a digital presence?",
+          "Where are your customers dropping off?",
+          "Can we work together?"
+        ]
+      },
+      {
+        "title": "We design the VM System",
+        "description": "We define a clear structure: funnel, automations and experience so everything works together, not separately.",
+        "bullets": [
+          "Sales funnel",
+          "Acquisition strategy",
+          "Key automations",
+          "Customer journey guidance"
+        ]
+      },
+      {
+        "title": "We build a website that converts",
+        "description": "We develop a website designed to guide, persuade and convert, fully connected to your system from day one.",
+        "bullets": [
+          "Result-driven structure",
+          "Guides users to take action",
+          "Unique and responsive design",
+          "Built to scale"
+        ]
+      },
+      {
+        "title": "We automate and optimize",
+        "description": "We integrate AI and automations to reduce manual work and improve results without constant involvement.",
+        "bullets": [
+          "Automated responses",
+          "Lead follow-up",
+          "CRM and tool integrations",
+          "Continuous optimization"
+        ]
+      }
+    ],
+
+    "result": {
+      "title": "We send you",
+      "highlight": "a PDF with a self-diagnosis",
+      "description": "Receive a guide in your email to analyze your business, identify problems and understand how to improve your results.",
+      "placeholder": "Your email",
+      "cta": "Get the guide",
+      "features": ["Self-diagnosis", "100% Free", "No commitment"]
+    }
   }
+
 
 
 }

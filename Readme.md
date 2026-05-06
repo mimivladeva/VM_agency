@@ -15,3 +15,6 @@ git checkout main
 git pull origin main
 git merge viktor # o mimi
 git push origin main
+
+# 4. Dependencias
+npm install next-intl

@@ -15,79 +15,71 @@ import {
 import "../css/ServicePackOne.css";
 import "../css/ServicePackTwo.css";
 import "../css/typography.css";
-
-const features = [
-    {
-        icon: Workflow,
-        title: "Automatización de procesos",
-        text: "Eliminamos tareas repetitivas para ahorrar tiempo.",
-    },
-    {
-        icon: MessageCircle,
-        title: "Respuestas automáticas",
-        text: "Web, WhatsApp y email funcionando 24/7.",
-    },
-    {
-        icon: Bot,
-        title: "Chatbots inteligentes",
-        text: "Atienden clientes sin intervención humana.",
-    },
-    {
-        icon: Mail,
-        title: "Seguimiento automático",
-        text: "No pierdes oportunidades por falta de respuesta.",
-    },
-    {
-        icon: BrainCircuit,
-        title: "IA aplicada al negocio",
-        text: "Clasifica, responde y optimiza decisiones.",
-    },
-    {
-        icon: Cpu,
-        title: "Sistema escalable",
-        text: "Tu negocio crece sin aumentar carga de trabajo.",
-    },
-];
+import { useTranslations } from "next-intl";
 
 export function ServicePackThree() {
+    const t = useTranslations("Pack3");
+
+    const features = [
+        {
+            icon: Workflow,
+            title: t("features.0.title"),
+            text: t("features.0.text"),
+        },
+        {
+            icon: MessageCircle,
+            title: t("features.1.title"),
+            text: t("features.1.text"),
+        },
+        {
+            icon: Bot,
+            title: t("features.2.title"),
+            text: t("features.2.text"),
+        },
+        {
+            icon: Mail,
+            title: t("features.3.title"),
+            text: t("features.3.text"),
+        },
+        {
+            icon: BrainCircuit,
+            title: t("features.4.title"),
+            text: t("features.4.text"),
+        },
+        {
+            icon: Cpu,
+            title: t("features.5.title"),
+            text: t("features.5.text"),
+        },
+    ];
+
     return (
         <section className="service-pack-section">
             <div className="service-pack-container">
 
-                {/* HERO */}
                 <div className="service-hero">
-
-                    {/* TEXTO */}
                     <div className="service-hero-content">
                         <span className="service-badge">PACK 3</span>
 
                         <h2 className="service-title heading-h2">
-                            Automatización <span>e IA</span>
+                            {t("title")} <span>{t("highlight")}</span>
                         </h2>
 
                         <p className="service-description text-body">
-                            El sistema trabaja por ti mientras tú escalas.
-                            Automatizamos procesos, mejoramos la atención y aplicamos IA
-                            para que tu negocio funcione incluso cuando no estás.
+                            {t("description")}
                         </p>
                     </div>
 
-                    {/* IMAGEN */}
                     <div className="service-image">
-                        <img
-                            src="/images/automatizaciones_ia.png"
-                            alt="Automatización e IA"
-                        />
+                        <img src="/images/automatizaciones_ia.png" alt={t("imageAlt")} />
                     </div>
-
                 </div>
 
-                {/* CONTENT */}
                 <div className="service-content-grid">
 
                     <div className="service-includes">
                         <h2 className="heading-h2">
-                            ¿Qué <span>incluye</span> este pack?
+                            {t("includes")} <span>{t("includesHighlight")}</span>
                         </h2>
 
                         <div className="features-grid">
@@ -107,35 +99,31 @@ export function ServicePackThree() {
                         </div>
                     </div>
 
-                    {/* PRICE */}
                     <aside className="service-price-card">
                         <span>PACK 3</span>
-                        <h2 className="heading-h3">Automatización e IA</h2>
+                        <h2 className="heading-h3">{t("price.title")}</h2>
 
                         <ul>
-                            <li><Check /> Automatiza tu negocio 24/7</li>
-                            <li><Check /> Reduce carga de trabajo manual</li>
-                            <li><Check /> Escala sin aumentar costes</li>
+                            <li><Check /> {t("price.points.0")}</li>
+                            <li><Check /> {t("price.points.1")}</li>
+                            <li><Check /> {t("price.points.2")}</li>
                         </ul>
 
                         <div className="service-price">
-                            <small>Desde</small>
-                            <strong>1299€</strong>
-                            <small>pago único</small>
+                            <small>{t("price.from")}</small>
+                            <strong>{t("price.value")}</strong>
+                            <small>{t("price.type")}</small>
                         </div>
 
                         <a href="#contacto" className="service-main-button">
-                            Quiero este pack
+                            {t("price.cta")}
                         </a>
 
-                        <p className="service-note">
-                            Sin mensualidades · Sin permanencia
-                        </p>
+                        <p className="service-note">{t("price.note")}</p>
                     </aside>
 
                 </div>
 
-                {/* CTA */}
                 <div className="service-bottom-cta">
                     <div className="service-bottom-left">
                         <div className="bottom-icon">
@@ -143,17 +131,13 @@ export function ServicePackThree() {
                         </div>
 
                         <div>
-                            <h3 className="heading-h3">
-                                ¿Quieres que tu negocio funcione solo?
-                            </h3>
-                            <p className="text-body">
-                                Diseñamos sistemas automáticos que trabajan por ti.
-                            </p>
+                            <h3 className="heading-h3">{t("bottom.title")}</h3>
+                            <p className="text-body">{t("bottom.desc")}</p>
                         </div>
                     </div>
 
                     <a href="#contacto" className="service-secondary-button">
-                        Solicitar llamada gratuita <Phone />
+                        {t("bottom.cta")} <Phone />
                     </a>
                 </div>
 

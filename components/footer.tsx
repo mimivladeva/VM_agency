@@ -2,22 +2,8 @@
 
 import Link from "next/link"
 import { Twitter, Linkedin, Instagram, Mail, MapPin, ArrowUpRight } from "lucide-react"
+import { useTranslations } from "next-intl"
 import "@/components/css/footer.css"
-
-const quickLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#servicios", label: "Servicios" },
-  { href: "#proyectos", label: "Proyectos" },
-  { href: "#contactar", label: "Contactar" },
-  { href: "#faq", label: "FAQ" },
-]
-
-const services = [
-  "Automatización con IA",
-  "Desarrollo Web",
-  "Apps a Medida",
-  "Optimización de Procesos",
-]
 
 const socialLinks = [
   { icon: Twitter, href: "#", label: "Twitter" },
@@ -26,6 +12,16 @@ const socialLinks = [
 ]
 
 export function Footer() {
+  const t = useTranslations("Footer")
+
+  const quickLinks = [
+    { href: "#home", label: t("links.home") },
+    { href: "#servicios", label: t("links.servicios") },
+    { href: "#proyectos", label: t("links.proyectos") },
+    { href: "#contactar", label: t("links.contactar") },
+    { href: "#faq", label: t("links.faq") },
+  ]
+
   return (
       <footer className="footer">
         <div className="footer-glow footer-glow-purple" />
@@ -41,8 +37,7 @@ export function Footer() {
               </Link>
 
               <p className="footer-brand-text">
-                Transformamos negocios tradicionales con tecnología, diseño y automatización.
-                Creamos sistemas digitales pensados para atraer, convertir y escalar.
+                {t("brand")}
               </p>
 
               <div className="footer-socials">
@@ -61,7 +56,7 @@ export function Footer() {
 
             <div className="footer-links-area">
               <div className="footer-column">
-                <h4 className="footer-title">Enlaces</h4>
+                <h4 className="footer-title">{t("titles.links")}</h4>
                 <ul className="footer-list">
                   {quickLinks.map((link, index) => (
                       <li key={index}>
@@ -74,20 +69,18 @@ export function Footer() {
               </div>
 
               <div className="footer-column">
-                <h4 className="footer-title">Legal</h4>
-                <ul className="footer-list">
-
-
-                </ul>
+                <h4 className="footer-title">{t("titles.legal")}</h4>
+                <ul className="footer-list"></ul>
               </div>
 
               <div className="footer-column">
-                <h4 className="footer-title">Contacto</h4>
+                <h4 className="footer-title">{t("titles.contact")}</h4>
+
                 <ul className="footer-contact-list">
                   <li className="footer-contact-item">
                     <a href="mailto:hola@vmagency.com" className="footer-contact-link">
                       <div className="footer-contact-icon-wrap">
-                        <Mail className="footer-contact-icon"/>
+                        <Mail className="footer-contact-icon" />
                       </div>
                       <span className="footer-contact-text">vmmarketing.ia@gmail.com</span>
                     </a>
@@ -101,27 +94,24 @@ export function Footer() {
                         className="footer-contact-link"
                     >
                       <div className="footer-contact-icon-wrap">
-                        <MapPin className="footer-contact-icon"/>
+                        <MapPin className="footer-contact-icon" />
                       </div>
-                      <span className="footer-contact-text">Madrid, España</span>
+                      <span className="footer-contact-text">{t("location")}</span>
                     </a>
                   </li>
                 </ul>
-                {/* DESKTOP SIMPLE */}
+
                 <Link href="#contactar" className="footer-cta-link desktop-only">
-                  Hablemos de tu proyecto
-                  <ArrowUpRight className="footer-cta-arrow"/>
+                  {t("cta.title")}
+                  <ArrowUpRight className="footer-cta-arrow" />
                 </Link>
 
-                {/* MOBILE CARD */}
                 <Link href="#contactar" className="footer-cta-card mobile-only">
                   <div className="footer-cta-content">
-                    <span className="footer-cta-title">Hablemos de tu proyecto</span>
-                    <span className="footer-cta-sub">
-      Cuéntanos tu idea y te ayudamos a hacerla crecer.
-    </span>
+                    <span className="footer-cta-title">{t("cta.title")}</span>
+                    <span className="footer-cta-sub">{t("cta.subtitle")}</span>
                   </div>
-                  <ArrowUpRight className="footer-cta-icon"/>
+                  <ArrowUpRight className="footer-cta-icon" />
                 </Link>
               </div>
             </div>
@@ -129,7 +119,7 @@ export function Footer() {
 
           <div className="footer-bottom">
             <p className="footer-copy">
-              © {new Date().getFullYear()} VM Agencia. Todos los derechos reservados.
+              © {new Date().getFullYear()} VM Agencia. {t("copy")}
             </p>
           </div>
         </div>

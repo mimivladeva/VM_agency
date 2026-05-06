@@ -1,52 +1,15 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import { ArrowUpRight, Globe, Zap, BarChart3 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion, AnimatePresence } from "framer-motion"
-import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl"
 import "@/components/css/ProjectsSection.css"
 import "@/components/css/typography.css"
 
-const projects = [
-  {
-    id: 1,
-    title: "VG Detailing",
-    category: "Web Corporativa",
-    icon: Globe,
-    description:
-        "Sitio web profesional para estudio de detailing con enfoque premium, reserva de citas y presentación clara de servicios.",
-    type: "video",
-    laptop: "/images/vgdetailing-laptop.mp4",
-    mobile: "/images/vgdetailing-mobile.png",
-  },
-  {
-    id: 2,
-    title: "Automatización de Leads",
-    category: "IA & Automatización",
-    icon: Zap,
-    description:
-        "Sistema de captura y cualificación automática de leads con IA e integración con CRM.",
-    type: "video",
-    laptop: "/images/videoIA.mp4",
-    mobile: "/images/dashboard.png",
-  },
-  {
-    id: 3,
-    title: "Dashboard Interno",
-    category: "App a Medida",
-    icon: BarChart3,
-    description:
-        "Dashboard de analítica y control de operaciones en tiempo real para empresa logística.",
-    type: "image",
-    laptop: "/images/project3-laptop.png",
-    mobile: "/images/project3-mobile.png",
-  },
-]
-
-function DeviceMockup({ project }: { project: (typeof projects)[0] }) {
-
+function DeviceMockup({ project }: { project: any }) {
   return (
       <AnimatePresence mode="wait">
         <motion.div
@@ -113,70 +76,84 @@ function DeviceMockup({ project }: { project: (typeof projects)[0] }) {
 }
 
 export function ProjectsSection() {
-  const [activeProject, setActiveProject] = useState<(typeof projects)[0] | null>(null)
+  const t = useTranslations("Projects")
 
+  const projects = [
+    {
+      id: 1,
+      title: "VG Detailing",
+      category: t("projects.0.category"),
+      description: t("projects.0.description"),
+      icon: Globe,
+      type: "video",
+      laptop: "/images/vgdetailing-laptop.mp4",
+      mobile: "/images/vgdetailing-mobile.png",
+    },
+    {
+      id: 2,
+      title: t("projects.1.title"),
+      category: t("projects.1.category"),
+      description: t("projects.1.description"),
+      icon: Zap,
+      type: "video",
+      laptop: "/images/videoIA.mp4",
+      mobile: "/images/dashboard.png",
+    },
+    {
+      id: 3,
+      title: t("projects.2.title"),
+      category: t("projects.2.category"),
+      description: t("projects.2.description"),
+      icon: BarChart3,
+      type: "image",
+      laptop: "/images/project3-laptop.png",
+      mobile: "/images/project3-mobile.png",
+    },
+  ]
 
-  const previewRef = useRef<HTMLDivElement | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
-  const [hoverEnabled, setHoverEnabled] = useState(true);
-  
+  const [activeProject, setActiveProject] = useState<any>(null)
+  const previewRef = useRef<HTMLDivElement | null>(null)
+  const [isMobile, setIsMobile] = useState(false)
+  const [hoverEnabled, setHoverEnabled] = useState(true)
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
 
   return (
       <section className="projects-section">
         <div className="projects-container">
           <div className="projects-header">
             <h2 className="projects-title heading-h2">
-              Proyectos que{" "}
-              <span className="projects-title-gradient">convierten</span>
+              {t("title")} <span className="projects-title-gradient">{t("highlight")}</span>
             </h2>
 
-            <p className="projects-subtitle">
-              Selecciona un proyecto para ver cómo se ve realmente en dispositivos.
-            </p>
+            <p className="projects-subtitle">{t("subtitle")}</p>
           </div>
 
-          <div
-              className={`projects-content ${
-                  activeProject ? "projects-content-active" : "projects-content-idle"
-              }`}
-          >
-            <div
-                className={`projects-cards ${
-                    activeProject ? "projects-cards-stacked" : "projects-cards-inline"
-                }`}
-            >
+          <div className={`projects-content ${activeProject ? "projects-content-active" : "projects-content-idle"}`}>
+            <div className={`projects-cards ${activeProject ? "projects-cards-stacked" : "projects-cards-inline"}`}>
               {projects.map((project) => {
                 const isActive = activeProject?.id === project.id
 
                 return (
                     <Card
                         key={project.id}
-                        onMouseEnter={() => {
-                          if (hoverEnabled) {
-                            setActiveProject(project);
-                          }
-                        }}
+                        onMouseEnter={() => hoverEnabled && setActiveProject(project)}
                         onClick={() => {
-                          setActiveProject(project);
-                          setHoverEnabled(false);
+                          setActiveProject(project)
+                          setHoverEnabled(false)
 
                           if (isMobile) {
                             setTimeout(() => {
-                              previewRef.current?.scrollIntoView({
-                                behavior: "smooth",
-                                block: "center",
-                              });
-                            }, 100);
+                              previewRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })
+                            }, 100)
                           }
                         }}
-                        className={`projects-card group ${
+                        className={`projects-card ${
                             activeProject ? "projects-card-full" : "projects-card-fixed"
                         } ${isActive ? "projects-card-active" : "projects-card-idle"}`}
                     >
@@ -189,17 +166,14 @@ export function ProjectsSection() {
 
                         <span className="projects-category">{project.category}</span>
 
-
                         <h3 className="projects-card-title card-title">
-                      <span className="projects-card-title-gradient">
-                        {project.title}
-                      </span>
+                          <span className="projects-card-title-gradient">{project.title}</span>
                         </h3>
 
                         <p className="projects-description">{project.description}</p>
 
                         <div className="projects-card-footer">
-                          <span className="projects-card-cta">Ver proyecto</span>
+                          <span className="projects-card-cta">{t("cta")}</span>
                           <ArrowUpRight className="projects-card-arrow" />
                         </div>
                       </CardContent>
@@ -209,12 +183,7 @@ export function ProjectsSection() {
             </div>
 
             {activeProject && (
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="projects-preview"
-                    ref={previewRef}
-                >
+                <motion.div className="projects-preview" ref={previewRef}>
                   <DeviceMockup project={activeProject} />
                 </motion.div>
             )}

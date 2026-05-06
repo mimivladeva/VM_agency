@@ -13,79 +13,71 @@ import {
 import "../css/ServicePackOne.css";
 import "../css/ServicePackTwo.css";
 import "../css/typography.css";
-
-const features = [
-    {
-        icon: BarChart3,
-        title: "Análisis de datos",
-        text: "Entiende qué está pasando en tu negocio.",
-    },
-    {
-        icon: TrendingUp,
-        title: "Optimización de conversiones",
-        text: "Mejoramos resultados sin aumentar tráfico.",
-    },
-    {
-        icon: Cpu,
-        title: "Integraciones con IA",
-        text: "Automatiza decisiones basadas en datos reales.",
-    },
-    {
-        icon: AppWindow,
-        title: "Apps a medida",
-        text: "Soluciones personalizadas para tu negocio.",
-    },
-    {
-        icon: BarChart3,
-        title: "Dashboards inteligentes",
-        text: "Visualiza métricas clave en tiempo real.",
-    },
-    {
-        icon: TrendingUp,
-        title: "Mejora continua",
-        text: "Optimizamos constantemente tu sistema.",
-    },
-];
+import { useTranslations } from "next-intl";
 
 export function ServicePackFour() {
+    const t = useTranslations("Pack4");
+
+    const features = [
+        {
+            icon: BarChart3,
+            title: t("features.0.title"),
+            text: t("features.0.text"),
+        },
+        {
+            icon: TrendingUp,
+            title: t("features.1.title"),
+            text: t("features.1.text"),
+        },
+        {
+            icon: Cpu,
+            title: t("features.2.title"),
+            text: t("features.2.text"),
+        },
+        {
+            icon: AppWindow,
+            title: t("features.3.title"),
+            text: t("features.3.text"),
+        },
+        {
+            icon: BarChart3,
+            title: t("features.4.title"),
+            text: t("features.4.text"),
+        },
+        {
+            icon: TrendingUp,
+            title: t("features.5.title"),
+            text: t("features.5.text"),
+        },
+    ];
+
     return (
         <section className="service-pack-section">
             <div className="service-pack-container">
 
-                {/* HERO */}
                 <div className="service-hero">
-
-                    {/* TEXTO */}
                     <div className="service-hero-content">
                         <span className="service-badge">PACK 4</span>
 
                         <h2 className="service-title heading-h2">
-                            Análisis <span>y optimización</span>
+                            {t("title")} <span>{t("highlight")}</span>
                         </h2>
 
                         <p className="service-description text-body">
-                            Decisiones basadas en datos para crecer sin fricción.
-                            Analizamos, optimizamos y mejoramos continuamente tu negocio
-                            para maximizar resultados.
+                            {t("description")}
                         </p>
                     </div>
 
-                    {/* IMAGEN */}
                     <div className="service-image">
-                        <img
-                            src="/images/analisis.png"
-                            alt="Análisis y optimización"
-                        />
+                        <img src="/images/analisis.png" alt={t("imageAlt")} />
                     </div>
-
                 </div>
 
-                {/* CONTENT */}
                 <div className="service-content-grid">
 
                     <div className="service-includes">
                         <h2 className="heading-h2">
-                            ¿Qué <span>incluye</span> este pack?
+                            {t("includes")} <span>{t("includesHighlight")}</span>
                         </h2>
 
                         <div className="features-grid">
@@ -105,35 +97,31 @@ export function ServicePackFour() {
                         </div>
                     </div>
 
-                    {/* PRICE */}
                     <aside className="service-price-card">
                         <span>PACK 4</span>
-                        <h2 className="heading-h3">Análisis y optimización</h2>
+                        <h2 className="heading-h3">{t("price.title")}</h2>
 
                         <ul>
-                            <li><Check /> Mejora decisiones con datos</li>
-                            <li><Check /> Optimiza sin aumentar costes</li>
-                            <li><Check /> Escala con control total</li>
+                            <li><Check /> {t("price.points.0")}</li>
+                            <li><Check /> {t("price.points.1")}</li>
+                            <li><Check /> {t("price.points.2")}</li>
                         </ul>
 
                         <div className="service-price">
-                            <small>Desde</small>
-                            <strong>1499€</strong>
-                            <small>pago único</small>
+                            <small>{t("price.from")}</small>
+                            <strong>{t("price.value")}</strong>
+                            <small>{t("price.type")}</small>
                         </div>
 
                         <a href="#contacto" className="service-main-button">
-                            Quiero este pack
+                            {t("price.cta")}
                         </a>
 
-                        <p className="service-note">
-                            Sin mensualidades · Sin permanencia
-                        </p>
+                        <p className="service-note">{t("price.note")}</p>
                     </aside>
 
                 </div>
 
-                {/* CTA */}
                 <div className="service-bottom-cta">
                     <div className="service-bottom-left">
                         <div className="bottom-icon">
@@ -141,17 +129,13 @@ export function ServicePackFour() {
                         </div>
 
                         <div>
-                            <h3 className="heading-h3">
-                                ¿Quieres tomar mejores decisiones?
-                            </h3>
-                            <p className="text-body">
-                                Convertimos datos en crecimiento real para tu negocio.
-                            </p>
+                            <h3 className="heading-h3">{t("bottom.title")}</h3>
+                            <p className="text-body">{t("bottom.desc")}</p>
                         </div>
                     </div>
 
                     <a href="#contacto" className="service-secondary-button">
-                        Solicitar llamada gratuita <Phone />
+                        {t("bottom.cta")} <Phone />
                     </a>
                 </div>
 

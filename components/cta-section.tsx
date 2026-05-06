@@ -1,14 +1,15 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles } from "lucide-react"
 import "@/components/css/CTASection.css"
 import "@/components/css/typography.css"
 import { HeroBackground } from "@/components/hero/HeroBackground"
 import NeuralStatic from "@/components/hero/NeuralStatic"
-import GlowButton from "@/components/hero/GlowButton";
+import GlowButton from "@/components/hero/GlowButton"
+import { useTranslations } from "next-intl"
 
 export function CTASection() {
+  const t = useTranslations("CTA")
+
   return (
       <section id="contactar" className="cta-section">
         <div className="cta-section-bg">
@@ -18,38 +19,30 @@ export function CTASection() {
 
         <div className="cta-section-container">
           <div className="cta-card">
-            {/* CAPAS DE FONDO */}
             <div className="cta-card-bg">
-              <HeroBackground/>
-              <NeuralStatic/>
-              <div className="cta-card-overlay"/>
+              <HeroBackground />
+              <NeuralStatic />
+              <div className="cta-card-overlay" />
             </div>
-            {/* CAPAS DE logo */}
+
             <div className="cta-logo">
-              <img src="/images/VMlogo.png" alt="VM Agency" className="cta-logo-image"/>
+              <img src="/images/VMlogo.png" alt="VM Agency" className="cta-logo-image" />
             </div>
 
-            {/* DECORACIONES EXTRA */}
-            <div className="cta-card-deco cta-card-deco-right"/>
-            <div className="cta-card-deco cta-card-deco-left"/>
+            <div className="cta-card-deco cta-card-deco-right" />
+            <div className="cta-card-deco cta-card-deco-left" />
 
-            {/* CONTENIDO */}
             <div className="cta-content">
-              {/*  <div className="cta-badge">
-                <Sparkles className="cta-badge-icon"/>
-                <span>¿Listo para empezar?</span>
-              </div> */}
-
               <h2 className="cta-title heading-h2">
-               Si quieres hacer crecer tu negocio local <span>necesitas VM Agencia</span>
+                {t("title")} <span>{t("highlight")}</span>
               </h2>
 
               <p className="cta-description">
-                Te enseñamos que esta fallando en tu negocio y como solucionarlo. 
+                {t("description")}
               </p>
 
               <div className="hero-button-wrapper">
-                <GlowButton/>
+                <GlowButton />
               </div>
             </div>
           </div>

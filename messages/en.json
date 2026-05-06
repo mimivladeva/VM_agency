@@ -164,7 +164,286 @@
       "cta": "Get the guide",
       "features": ["Self-diagnosis", "100% Free", "No commitment"]
     }
+  },
+
+  "Projects": {
+    "title": "Projects that",
+    "highlight": "convert",
+    "subtitle": "Select a project to see how it actually looks across devices.",
+    "cta": "View project",
+    "projects": [
+      {
+        "category": "Corporate Website",
+        "description": "Professional website for a detailing studio with a premium approach, booking system and clear service presentation."
+      },
+      {
+        "title": "Lead Automation",
+        "category": "AI & Automation",
+        "description": "AI-powered system for capturing and qualifying leads with CRM integration."
+      },
+      {
+        "title": "Internal Dashboard",
+        "category": "Custom App",
+        "description": "Real-time analytics and operations control dashboard for a logistics company."
+      }
+    ]
+  },
+
+  "CTA": {
+    "title": "If you want to grow your local business",
+    "highlight": "you need VM Agency",
+    "description": "We show you what’s holding your business back and how to fix it."
+  },
+
+  "Footer": {
+    "brand": "We transform traditional businesses through technology, design and automation. We build digital systems designed to attract, convert and scale.",
+    "titles": {
+      "links": "Links",
+      "legal": "Legal",
+      "contact": "Contact"
+    },
+    "links": {
+      "home": "Home",
+      "servicios": "Services",
+      "proyectos": "Projects",
+      "contactar": "Contact",
+      "faq": "FAQ"
+    },
+    "location": "Madrid, Spain",
+    "cta": {
+      "title": "Let’s talk about your project",
+      "subtitle": "Tell us your idea and we’ll help you grow it."
+    },
+    "copy": "All rights reserved."
+  },
+
+  "Pack1": {
+    "title": "Service",
+    "highlight": "Website + Basic SEO",
+    "description": "We build your professional website and optimize it with basic SEO so your business can be found more easily on Google.",
+
+    "includes": "What",
+    "includesHighlight": "is included",
+
+    "features": [
+      {
+        "title": "Professional website",
+        "text": "Modern, responsive design tailored to your business."
+      },
+      {
+        "title": "Basic SEO",
+        "text": "Optimization of titles, descriptions and structure."
+      },
+      {
+        "title": "Fast loading",
+        "text": "Optimized for speed to improve user experience."
+      },
+      {
+        "title": "100% Responsive",
+        "text": "Looks perfect on mobile, tablet and desktop."
+      },
+      {
+        "title": "Strategic copywriting",
+        "text": "Clear messaging that explains what you offer effectively."
+      },
+      {
+        "title": "Secure and reliable",
+        "text": "Basic security practices to build trust and reliability."
+      }
+    ],
+
+    "price": {
+      "title": "Website + Basic SEO",
+      "points": [
+        "Perfect for businesses getting started",
+        "Improve your visibility on Google",
+        "Attract more organic customers"
+      ],
+      "from": "From",
+      "value": "499€",
+      "type": "one-time payment",
+      "cta": "Get this package",
+      "note": "No monthly fees · No long-term commitment"
+    },
+
+    "bottom": {
+      "title": "Have questions or ready to start?",
+      "desc": "Let’s talk and help you choose the best solution for your business.",
+      "cta": "Request a free call"
+    },
+
+    "mockup": {
+      "business": "Your Business",
+      "nav": {
+        "home": "Home",
+        "services": "Services",
+        "contact": "Contact"
+      },
+      "titleHighlight": "Solutions",
+      "title": "that drive your business forward",
+      "subtitle": "We help businesses like yours grow with tailored digital solutions.",
+      "cta": "Request information",
+      "mobileText": "A website ready to convert visitors into clients.",
+      "contact": "Contact"
+    }
+  },
+
+  "Pack2": {
+    "title": "Customer",
+    "highlight": "acquisition",
+    "description": "We build a system that turns visitors into real customers by automating processes and optimizing every touchpoint.",
+    "imageAlt": "Lead generation system",
+
+    "includes": "What",
+    "includesHighlight": "is included",
+
+    "features": [
+      { "title": "Marketing strategy", "text": "We define how to consistently attract customers." },
+      { "title": "Sales funnels", "text": "We convert visits into real opportunities." },
+      { "title": "Customer automation", "text": "Automatic follow-up without losing opportunities." },
+      { "title": "WhatsApp integration", "text": "Respond and capture leads directly." },
+      { "title": "Email marketing", "text": "Direct and automated communication with clients." },
+      { "title": "Automated responses", "text": "A system that replies even when you're offline." }
+    ],
+
+    "price": {
+      "title": "Customer acquisition",
+      "points": [
+        "Turn visitors into customers",
+        "Automate sales processes",
+        "Increase real opportunities"
+      ],
+      "from": "From",
+      "value": "899€",
+      "type": "one-time payment",
+      "cta": "Get this package",
+      "note": "No monthly fees · No commitment"
+    },
+
+    "bottom": {
+      "title": "Want more clients without complexity?",
+      "desc": "We help you build a system that works for you.",
+      "cta": "Request a free call"
+    }
   }
+,
+
+  "Pack3": {
+    "title": "Automation",
+    "highlight": "and AI",
+    "description": "Your system works for you while you scale. We automate processes, improve customer interaction and apply AI so your business runs even when you're offline.",
+    "imageAlt": "Automation and AI",
+
+    "includes": "What",
+    "includesHighlight": "is included",
+
+    "features": [
+      { "title": "Process automation", "text": "We eliminate repetitive tasks to save time." },
+      { "title": "Automated responses", "text": "Web, WhatsApp and email working 24/7." },
+      { "title": "Smart chatbots", "text": "Handle customer interactions without human input." },
+      { "title": "Automatic follow-up", "text": "Never lose opportunities due to missed responses." },
+      { "title": "AI for business", "text": "Classifies, responds and optimizes decisions." },
+      { "title": "Scalable system", "text": "Grow your business without increasing workload." }
+    ],
+
+    "price": {
+      "title": "Automation and AI",
+      "points": [
+        "Run your business 24/7",
+        "Reduce manual workload",
+        "Scale without increasing costs"
+      ],
+      "from": "From",
+      "value": "1299€",
+      "type": "one-time payment",
+      "cta": "Get this package",
+      "note": "No monthly fees · No commitment"
+    },
+
+    "bottom": {
+      "title": "Want your business to run automatically?",
+      "desc": "We design systems that work for you.",
+      "cta": "Request a free call"
+    }
+  }
+,
+
+  "Pack4": {
+    "title": "Analytics",
+    "highlight": "and optimization",
+    "description": "Data-driven decisions to grow without friction. We analyze, optimize and continuously improve your business to maximize results.",
+    "imageAlt": "Analytics and optimization",
+
+    "includes": "What",
+    "includesHighlight": "is included",
+
+    "features": [
+      { "title": "Data analysis", "text": "Understand what is happening in your business." },
+      { "title": "Conversion optimization", "text": "Improve results without increasing traffic." },
+      { "title": "AI integrations", "text": "Automate decisions based on real data." },
+      { "title": "Custom apps", "text": "Tailored solutions for your business." },
+      { "title": "Smart dashboards", "text": "Visualize key metrics in real time." },
+      { "title": "Continuous improvement", "text": "We constantly optimize your system." }
+    ],
+
+    "price": {
+      "title": "Analytics and optimization",
+      "points": [
+        "Make better decisions with data",
+        "Optimize without increasing costs",
+        "Scale with full control"
+      ],
+      "from": "From",
+      "value": "1499€",
+      "type": "one-time payment",
+      "cta": "Get this package",
+      "note": "No monthly fees · No commitment"
+    },
+
+    "bottom": {
+      "title": "Want to make better decisions?",
+      "desc": "We turn data into real business growth.",
+      "cta": "Request a free call"
+    }
+  },
+
+  "FAQ": {
+    "title1": "Frequently",
+    "title2": "Asked Questions",
+    "subtitle": "We answer your doubts so you can make decisions with confidence.",
+    "items": [
+      {
+        "question": "I already get clients through word of mouth, why do I need this?",
+        "answer": "Word of mouth is great, but unstable. If you rely only on that, you have no control over how many new clients come in each week. We build a system that works alongside it to create a consistent flow and a professional online presence."
+      },
+      {
+        "question": "I don’t have time to learn new technologies or AI.",
+        "answer": "That’s exactly why we don’t sell you technology, we give you time and control. We handle the technical side so you only focus on results."
+      },
+      {
+        "question": "My business is small, isn’t this for bigger companies?",
+        "answer": "Actually, small businesses benefit the most. Every hour saved is time you can reinvest into growth or personal freedom."
+      },
+      {
+        "question": "I already have a website or social media but they don’t bring clients.",
+        "answer": "Having an online presence doesn’t mean having a system that converts. We build a strategy that turns visibility into real clients."
+      },
+      {
+        "question": "I’ve had bad experiences with marketing agencies.",
+        "answer": "We understand. Many agencies focus on vanity metrics. We focus on real transformation: trust, professionalism and real opportunities."
+      },
+      {
+        "question": "Is implementing these systems expensive?",
+        "answer": "What’s expensive is losing clients. This is not a cost, it’s an investment in stability, growth and efficiency."
+      }
+    ]
+  }
+
+
+
+
+
+
 
 
 

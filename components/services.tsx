@@ -5,16 +5,18 @@ import "./css/typography.css";
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl"
 
 export default function ServicesLadder() {
   const t = useTranslations("Services");
+  const locale = useLocale()
 
   const services = [
     {
       id: 1,
       title: t("pack1.title"),
       desc: t("pack1.desc"),
-      link: "/services/pack1",
+      link: `/${locale}/services/pack1`,
       items: [
         t("pack1.items.0"),
         t("pack1.items.1"),
@@ -25,7 +27,7 @@ export default function ServicesLadder() {
       id: 2,
       title: t("pack2.title"),
       desc: t("pack2.desc"),
-      link: "/services/pack2",
+      link: `/${locale}/services/pack2`,
       items: [
         t("pack2.items.0"),
         t("pack2.items.1"),
@@ -37,7 +39,7 @@ export default function ServicesLadder() {
       id: 3,
       title: t("pack3.title"),
       desc: t("pack3.desc"),
-      link: "/services/pack3",
+      link: `/${locale}/services/pack3`,
       items: [
         t("pack3.items.0"),
         t("pack3.items.1"),
@@ -50,7 +52,7 @@ export default function ServicesLadder() {
       id: 4,
       title: t("pack4.title"),
       desc: t("pack4.desc"),
-      link: "/services/pack4",
+      link: `/${locale}/services/pack4`,
       items: [
         t("pack4.items.0"),
         t("pack4.items.1"),

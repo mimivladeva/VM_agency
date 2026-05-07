@@ -113,7 +113,7 @@
 /* ===== DESKTOP ===== */
 @media (min-width: 1024px) {
     .hero-title {
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
 
     .hero-content {
@@ -124,7 +124,7 @@
 /* ===== LARGE DESKTOP ===== */
 @media (min-width: 1280px) {
     .hero-title {
-        font-size: 3.8rem;
+        font-size: 4rem;
     }
 }
 
@@ -141,7 +141,7 @@
     }
 
     .hero-title {
-        font-size: 1.5rem;
+        font-size: 1.55rem;
         line-height: 1.08;
     }
 

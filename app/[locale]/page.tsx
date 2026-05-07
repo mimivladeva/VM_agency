@@ -7,6 +7,8 @@ import AutomationProgramSection from "@/components/system"
 import ServicesLadder from "@/components/services"
 import BusinessConversionSection from "@/components/BusinessConversionSection"
 import BackgroundImage from "@/components/BackgroundImage"
+import Formulario from "@/components/formulario"
+
 
 export default function Home() {
     return (

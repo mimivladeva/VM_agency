@@ -5,8 +5,8 @@ import { HeroBackground } from "@/components/hero/HeroBackground"
 import GlowButton from "@/components/hero/GlowButton"
 import { HeroVisual } from "@/components/hero/HeroVisual"
 import NeuralStatic from "@/components/hero/NeuralStatic"
-import { useTranslations } from "next-intl"
-import { useLocale } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
+import Link from "next/link"
 
 export function HeroSection() {
     const t = useTranslations("Hero")
@@ -42,7 +42,9 @@ export function HeroSection() {
                 </p>
 
                 <div className="hero-button-wrapper">
-                    <GlowButton />
+                    <Link href={`/${locale}/formulario`}>
+                        <GlowButton />
+                    </Link>
                 </div>
             </div>
         </section>

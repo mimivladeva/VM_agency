@@ -18,3 +18,21 @@ git push origin main
 
 # 4. Dependencias
 npm install next-intl
+
+# 4. Subir la pagina en servidor
+npm run build
+#  Creamos el index 
+out/index.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=/es/" />
+    <title>VM Agency</title>
+</head>
+<body></body>
+</html>
+
+
+npx serve out

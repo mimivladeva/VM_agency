@@ -28,7 +28,7 @@ export function CTASection() {
             </div>
 
             <div className="cta-logo">
-              <img src="/images/VMlogo.png" alt="VM Agency" className="cta-logo-image" />
+              <img src="/images_webp/VMlogo.webp" fetchPriority="high" alt="VM Agency" className="cta-logo-image" />
             </div>
 
             <div className="cta-card-deco cta-card-deco-right" />

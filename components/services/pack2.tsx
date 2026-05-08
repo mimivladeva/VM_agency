@@ -70,7 +70,7 @@ export function ServicePackTwo() {
                     </div>
 
                     <div className="service-image">
-                        <img src="/images/captacion.png" alt={t("imageAlt")} />
+                        <img src="/images_webp/captacion.webp" fetchPriority="high" alt={t("imageAlt")} />
                     </div>
                 </div>
 

@@ -13,8 +13,12 @@ export function HeroVisual() {
             {/* 🖐 MANO IZQUIERDA */}
             {/* ===================== */}
             <motion.img
-                src="/images/human-hand.png"
-                initial={{ x: -100, opacity: 0 }}
+                src="/images_webp/human-hand.webp"
+                srcSet="/images_webp/human-hand-mobile.webp 800w, /images_webp/human-hand.webp 1200w"
+                fetchPriority="high"
+                width={800}
+                height={533}
+                initial={{ x: -100, opacity: 0.1 }} 
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.7 }}
                 className="
@@ -41,8 +45,12 @@ export function HeroVisual() {
             {/* 🤖 MANO DERECHA */}
             {/* ===================== */}
             <motion.img
-                src="/images/robot-hand.png"
-                initial={{ x: 100, opacity: 0 }}
+                src="/images_webp/robot-hand.webp"
+                srcSet="/images_webp/robot-hand-mobile.webp 800w, /images_webp/robot-hand.webp 1200w"
+                initial={{ x: 100, opacity: 0.1 }}
+                fetchPriority="high"
+                width={800}
+                height={533}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="

@@ -17,7 +17,8 @@ git merge viktor # o mimi
 git push origin main
 
 # 4. Dependencias
-npm install next-intl
+npm install next-intl   
+npm install critters
 
 # 4. Subir la pagina en servidor
 npm run build
@@ -36,3 +37,4 @@ out/index.html
 
 
 npx serve out
+

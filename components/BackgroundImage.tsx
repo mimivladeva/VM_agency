@@ -5,7 +5,8 @@ export default function BackgroundImage() {
         <>
             <div className="bg-image-wrapper">
                 <img
-                    src="/images/fondo_fibra_laterales.png"
+                    src="/images_webp/fondo_fibra_laterales.webp"
+                    fetchPriority="high"
                     alt=""
                     className="bg-image"
                 />

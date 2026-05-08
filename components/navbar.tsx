@@ -80,7 +80,7 @@ export function Navbar({ forceActive = false }: { forceActive?: boolean }) {
                   <div className="absolute inset-0 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition duration-300 bg-gradient-to-r from-[#FDE259] to-[#F88A4B]" />
 
                   <Image
-                      src="/images/VMlogo.png"
+                      src="/images_webp/VMlogo.webp"
                       alt="VM Agency logo"
                       width={55}
                       height={55}

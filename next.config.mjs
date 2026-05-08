@@ -15,6 +15,11 @@ const nextConfig = {
   },
 
   trailingSlash: true,
+
+  // 🔥 ESTO ES LO QUE ELIMINARÁ LOS 5 CHUNKS DE CSS QUE TE BLOQUEAN
+  experimental: {
+    optimizeCss: true,
+  },
 }
 
 export default withNextIntl(nextConfig)

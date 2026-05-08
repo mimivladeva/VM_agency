@@ -71,7 +71,7 @@ export function ServicePackThree() {
                     </div>
 
                     <div className="service-image">
-                        <img src="/images/automatizaciones_ia.png" alt={t("imageAlt")} />
+                        <img src="/images_webp/automatizaciones_ia.webp" fetchPriority="high" alt={t("imageAlt")} />
                     </div>
                 </div>
 

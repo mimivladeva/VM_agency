@@ -69,7 +69,7 @@ export function ServicePackFour() {
                     </div>
 
                     <div className="service-image">
-                        <img src="/images/analisis.png" alt={t("imageAlt")} />
+                        <img src="/images_webp/analisis.webp" fetchPriority="high" alt={t("imageAlt")} />
                     </div>
                 </div>
 

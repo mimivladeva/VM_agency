@@ -409,8 +409,9 @@ export default function ConsultoriaVMPage() {
                 <div className="container">
                     <div className="logo-header">
                         <img
-                            src="/images/VMlogo.png"
+                            src="/images_webp/VMlogo.webp"
                             alt="VM Agency Logo"
+                            fetchPriority="high"
                         />
                     </div>
 

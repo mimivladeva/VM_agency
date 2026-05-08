@@ -209,7 +209,7 @@
       "contactar": "Contact",
       "faq": "FAQ"
     },
-    "location": "Madrid, Spain",
+    "location": "Gandia, Spain",
     "cta": {
       "title": "Let’s talk about your project",
       "subtitle": "Tell us your idea and we’ll help you grow it."
@@ -437,6 +437,74 @@
         "answer": "What’s expensive is losing clients. This is not a cost, it’s an investment in stability, growth and efficiency."
       }
     ]
+  },
+  "ConsultoriaVM": {
+    "welcome": {
+      "title": "Exclusive Access: VM Strategic Session",
+      "subtitle": "A space reserved for business owners looking for real results with websites, AI and automation.",
+      "button": "Start Evaluation"
+    },
+    "buttons": {
+      "next": "Next",
+      "submit": "Submit and Access the Calendar",
+      "calendly": "Book on Calendly"
+    },
+    "questions": {
+      "q1": {
+        "title": "1. What is your business profile?",
+        "options": {
+          "local": "0-10 employees (local business)",
+          "big": "More than 10 employees",
+          "noBusiness": "I don’t have a business yet (idea stage)",
+          "personal": "Personal project"
+        }
+      },
+      "q2": {
+        "title": "2. Budget for your digital setup?",
+        "options": {
+          "low": "Less than €499",
+          "mid": "Between €499 and €999",
+          "high": "More than €999",
+          "none": "I have an open budget"
+        }
+      },
+      "q3": {
+        "title": "3. When do you need your digital presence to be live?",
+        "options": {
+          "immediate": "Immediately (1-2 weeks)",
+          "soon": "In 1-3 months",
+          "curious": "I’m just browsing",
+          "late": "In more than 3 months"
+        }
+      },
+      "q4": {
+        "title": "4. Do you have a website and Google Business?",
+        "options": {
+          "none": "I don’t have anything",
+          "basic": "Basic website without Google Business",
+          "partial": "Google Business but no website",
+          "complete": "I already have a website + automation"
+        }
+      },
+      "q5": {
+        "title": "5. Do you want to automate tasks with AI?",
+        "options": {
+          "yes": "Yes, 100% committed",
+          "maybe": "Yes, but I need to see how it works",
+          "manual": "I prefer to keep doing things manually",
+          "no": "I’m not interested in automation"
+        }
+      }
+    },
+    "exit": {
+      "title": "Your profile does not currently qualify",
+      "subtitle": "We work with businesses that are ready to invest in digitalization with AI and automation."
+    },
+    "success": {
+      "title": "You have qualified!",
+      "subtitle": "Your profile matches our ideal client.",
+      "redirect": "Automatic redirection in {countdown} seconds."
+    }
   }
 
 

@@ -6,6 +6,10 @@ import es from "@/messages/es.json"
 import en from "@/messages/en.json"
 import bg from "@/messages/bg.json"
 
+export function generateStaticParams() {
+    return locales.map((locale) => ({ locale }))
+}
+
 export default async function LocaleLayout({
                                                children,
                                                params,

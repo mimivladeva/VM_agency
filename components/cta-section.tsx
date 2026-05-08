@@ -5,10 +5,12 @@ import "@/components/css/typography.css"
 import { HeroBackground } from "@/components/hero/HeroBackground"
 import NeuralStatic from "@/components/hero/NeuralStatic"
 import GlowButton from "@/components/hero/GlowButton"
-import { useTranslations } from "next-intl"
+import {useLocale, useTranslations} from "next-intl"
+import Link from "next/link";
 
 export function CTASection() {
   const t = useTranslations("CTA")
+  const locale = useLocale()
 
   return (
       <section id="contactar" className="cta-section">
@@ -42,7 +44,9 @@ export function CTASection() {
               </p>
 
               <div className="hero-button-wrapper">
-                <GlowButton />
+                <Link href={`/${locale}/formulario`}>
+                  <GlowButton/>
+                </Link>
               </div>
             </div>
           </div>
